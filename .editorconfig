@@ -1,0 +1,9 @@
+root = true
+
+[*]
+# Các thuộc tính cho mọi file
+indent_size = 4
+
+[*.{css}]
+# Các thuộc tính cho file css
+indent_size = 4

@@ -1,0 +1,9 @@
+{
+    "outputDirectory": ".dist",
+    "builds": [
+        {
+            "src": ".dist/**",
+            "use": "@vercel/static"
+        }
+    ]
+}
