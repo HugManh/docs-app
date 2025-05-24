@@ -1,5 +1,11 @@
-.vercel
-.dist
-
+.DS_Store
+.gitignore
 node_modules
-package-lock.json
+public
+prof
+tsconfig.tsbuildinfo
+.obsidian
+.quartz-cache
+private/
+.replit
+replit.nix
