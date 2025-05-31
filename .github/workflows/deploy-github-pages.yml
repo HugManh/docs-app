@@ -36,7 +36,7 @@ jobs:
           cd external-repo
           git sparse-checkout init --cone
           git sparse-checkout set Categories Attachments # Chỉ định hai thư mục cần lấy
-          git checkout main # Thay 'main' bằng nhánh của repo cần clone
+          git checkout development # Thay 'main' bằng nhánh của repo cần clone
       - name: Copy content to folder
         run: |
           cp -r external-repo/Categories/* content/
