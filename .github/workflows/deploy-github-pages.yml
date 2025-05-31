@@ -39,8 +39,10 @@ jobs:
           git checkout development # Thay 'main' bằng nhánh của repo cần clone
       - name: Copy content to folder
         run: |
+          rm -rf content
           cp -r external-repo/Categories/* content/
           cp -r external-repo/Attachments content/
+          rm -rf external-repo
       - uses: actions/setup-node@v4
         with:
           node-version: 22
