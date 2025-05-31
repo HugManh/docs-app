@@ -21,6 +21,26 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Fetch all history for git info
+      # - name: Checkout external repository
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: HugManh/brain-IT
+      #     ref: development
+      #     path: content
+      #     token: ${{ secrets.REPO_TOKEN }}
+      - name: Checkout external repository
+        env:
+          REPO_TOKEN: ${{ secrets.REPO_TOKEN }} # Nếu repo private, cần token
+        run: |
+          git clone --no-checkout https://$REPO_TOKEN@github.com/HugManh/brain-IT.git external-repo
+          cd external-repo
+          git sparse-checkout init --cone
+          git sparse-checkout set Categories Attachments # Chỉ định hai thư mục cần lấy
+          git checkout main # Thay 'main' bằng nhánh của repo cần clone
+      - name: Copy content to folder
+        run: |
+          cp -r external-repo/Categories/* content/
+          cp -r external-repo/Attachments content/
       - uses: actions/setup-node@v4
         with:
           node-version: 22
