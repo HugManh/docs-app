@@ -27,12 +27,10 @@ jobs:
       #     repository: HugManh/brain-IT
       #     ref: development
       #     path: content
-      #     token: ${{ secrets.REPO_TOKEN }}
+      #     token: ${{ secrets.SECRET_KEY }}
       - name: Checkout external repository
-        env:
-          REPO_TOKEN: ${{ secrets.REPO_TOKEN }} # Nếu repo private, cần token
         run: |
-          git clone --no-checkout https://$REPO_TOKEN@github.com/HugManh/brain-IT.git external-repo
+          git clone --no-checkout https://${{ secrets.SECRET_KEY }}@github.com/HugManh/brain-IT.git external-repo
           cd external-repo
           git sparse-checkout init --cone
           git sparse-checkout set Categories Attachments # Chỉ định hai thư mục cần lấy
