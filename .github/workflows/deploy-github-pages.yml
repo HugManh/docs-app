@@ -73,4 +73,8 @@ jobs:
           payload: |
             channel: ${{ secrets.SLACK_CHANNEL_ID }}
             text: "🚀 Deploy thành công lên GitHub Pages!\n🔗 URL: ${{ steps.deployment.outputs.page_url }}"
-
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: "🚀 Deploy thành công lên GitHub Pages!\n🔗 URL: ${{ steps.deployment.outputs.page_url }}"
