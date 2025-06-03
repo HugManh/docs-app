@@ -17,7 +17,7 @@ jobs:
       - name: Trigger Deploy Quartz site to GitHub Pages
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: "${{ secrets.SECRET_KEY }}"
+          token: ${{ secrets.SECRET_KEY }}
           repository: HugManh/docs-app.git
           event-type: Integration-with-Automation-Deploy
           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
