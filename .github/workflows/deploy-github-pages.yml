@@ -2,9 +2,13 @@ name: Deploy Quartz site to GitHub Pages
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [Integration-with-Automation-Deploy]
   push:
     branches:
       - quartz
+
+run-name: ${{ github.actor }}  🚀
 
 permissions:
   contents: read
@@ -24,6 +28,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Fetch all history for git info
+          ref: ${{ github.event.client_payload.ref }}
+      # - run: echo "Branch: ${{ github.event.client_payload.ref }}"
       # - name: Checkout external repository
       #   uses: actions/checkout@v4
       #   with:
