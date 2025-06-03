@@ -16,7 +16,7 @@ jobs:
       - name: Get quote for today
         id: get_quote
         run: |
-          quotes_file="./quotes.json"
+          quotes_file="quotes.json"
           day=$(date +%-d)
           total_quotes=$(jq length "$quotes_file")
           index=$(( (day - 1) % total_quotes ))
