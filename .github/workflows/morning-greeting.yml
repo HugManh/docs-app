@@ -1,0 +1,33 @@
+name: Daily Slack Quote Message
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # 8:30 AM, thứ 2 đến thứ 6
+  push:
+    branches:
+      - quartz
+
+jobs:
+  send-quote:
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get quote for today
+        id: get_quote
+        run: |
+          quotes_file="./quotes.json"
+          day=$(date +%-d)
+          total_quotes=$(jq length "$quotes_file")
+          index=$(( (day - 1) % total_quotes ))
+          quote=$(jq -r ".[$index]" "$quotes_file")
+          echo "::set-output name=quote::$quote"
+
+      - name: Send daily quote to Slack
+        uses: slackapi/slack-github-action@v2.1.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            channel: ${{ secrets.SLACK_CHANNEL_ID }}
+            text: "${{ steps.get_quote.outputs.quote }}\nChúc mọi người có một ngày làm việc hiệu quả! 🚀"
