@@ -12,6 +12,8 @@ run-name: ${{ github.actor }} Schedule Tasks 🚀
 
 jobs:
   trigger-deplop-website:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Deploy Quartz site to GitHub Pages
