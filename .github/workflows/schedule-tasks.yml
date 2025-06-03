@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "*/1 * * * *" # chạy mỗi 1 phút
     # - cron: "0 23 * * *" # mỗi ngày 23:00 chạy 1 lần
+  push:
+    branches:
+      - quartz
 
 run-name: ${{ github.actor }} Schedule Tasks 🚀
 
