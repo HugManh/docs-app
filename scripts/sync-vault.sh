@@ -18,6 +18,21 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 mkdir -p "$DEST"
 rm -rf "${DEST:?}"/*
 
+# Chặn commit nhầm nội dung vault vào repo này. Không dùng .gitignore được vì Quartz
+# bỏ qua file bị .gitignore; .git/info/exclude thì git tôn trọng nhưng Quartz không đọc.
+if EXCLUDE="$(git -C "$ROOT" rev-parse --git-path info/exclude 2>/dev/null)"; then
+  case "$EXCLUDE" in /* | [A-Za-z]:*) ;; *) EXCLUDE="$ROOT/$EXCLUDE" ;; esac
+  DEST_REL="$(realpath --relative-to="$ROOT" "$DEST")"
+  case "$DEST_REL" in
+    ..*) ;; # thư mục đích nằm ngoài repo, không cần chặn
+    *)
+      mkdir -p "$(dirname "$EXCLUDE")"
+      grep -qxF "/$DEST_REL/*" "$EXCLUDE" 2>/dev/null ||
+        printf '/%s/*\n!/%s/.gitkeep\n' "$DEST_REL" "$DEST_REL" >>"$EXCLUDE"
+      ;;
+  esac
+fi
+
 cp -r "$VAULT/30-Resources" "$DEST/notes"
 cp -r "$VAULT/40-MOCs/." "$DEST/"
 cp -r "$VAULT/_Attachments" "$DEST/assets"

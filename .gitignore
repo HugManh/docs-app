@@ -12,3 +12,7 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
+
+# KHÔNG thêm content/ vào đây: Quartz bỏ qua mọi file bị .gitignore nên site sẽ rỗng.
+# content/ được dựng từ vault bằng scripts/sync-vault.sh; script tự thêm nó vào
+# .git/info/exclude (git bỏ qua, Quartz vẫn đọc) để tránh commit/push nhầm.
