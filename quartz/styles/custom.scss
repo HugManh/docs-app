@@ -1,0 +1,67 @@
+@use "./variables.scss" as *;
+
+// Nhiều note trong vault mở đầu bằng `# Tiêu đề` vì Obsidian đang tắt inline title.
+// Trên web ArticleTitle đã hiện tiêu đề từ frontmatter -> ẩn H1 trùng ở đầu bài.
+body:not([data-slug="index"]) .markdown-preview-view > h1:first-child {
+  display: none;
+}
+
+// ...và bỏ luôn H1 đó khỏi mục lục, kéo các mục còn lại lên một cấp.
+body:not([data-slug="index"]):has(.markdown-preview-view > h1:first-child) .toc-content {
+  & > li.depth-0:first-child {
+    display: none;
+  }
+
+  & > li.depth-1 {
+    padding-left: 0;
+  }
+
+  & > li.depth-2 {
+    padding-left: 1rem;
+  }
+
+  & > li.depth-3 {
+    padding-left: 2rem;
+  }
+}
+
+// Link tới note chưa viết (CrawlLinks.disableBrokenWikilinks): hiện như chữ thường
+// thay vì một link dẫn tới trang 404.
+a.internal.broken {
+  color: inherit;
+  background: none;
+  padding: 0;
+  pointer-events: none;
+  cursor: text;
+}
+
+// Bases (thay cho dataview): bỏ dòng đếm "Showing x of y entries" (chưa có bản dịch)
+// và nhãn thuộc tính trong card.
+.bases-view-meta,
+.bases-card-label {
+  display: none;
+}
+
+a.bases-card {
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+  }
+}
+
+// Trang chủ: tiêu đề lớn hơn, đoạn mở đầu dễ đọc hơn.
+body[data-slug="index"] .markdown-preview-view {
+  & > h1:first-child {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  & > p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+}

@@ -1,0 +1,104 @@
+name: Deploy sites
+
+# Mỗi site là một thư mục sites/<site>/ (cấu hình) + một vault Obsidian riêng.
+# - Vault thay đổi: workflow bên vault gọi workflow_dispatch với `site` của nó
+#   -> chỉ build và deploy site đó.
+# - Engine (nhánh v5) thay đổi: build lại tất cả site.
+# Bản build nằm trên nhánh gh-pages, mỗi site một thư mục; GitHub Pages phục vụ từ nhánh đó.
+on:
+  workflow_dispatch:
+    inputs:
+      site:
+        description: Tên site trong sites/ (để trống = tất cả)
+        required: false
+        default: ""
+        type: string
+  push:
+    branches:
+      - v5
+
+run-name: ${{ github.actor }} deploy ${{ inputs.site || 'tất cả site' }} 🚀
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      sites: ${{ steps.list.outputs.sites }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: list
+        env:
+          SITE: ${{ inputs.site }}
+        run: |
+          if [ -n "$SITE" ]; then
+            [ -f "sites/$SITE/site.conf" ] || { echo "::error::Không có sites/$SITE/site.conf"; exit 1; }
+            echo "sites=[\"$SITE\"]" >> "$GITHUB_OUTPUT"
+          else
+            echo "sites=$(ls sites/*/site.conf | cut -d/ -f2 | jq -Rnc '[inputs]')" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy:
+    needs: plan
+    runs-on: ubuntu-latest
+    # SECRET_KEY, SLACK_* là secret của environment này
+    environment:
+      name: github-pages
+      url: https://hugmanh.github.io/docs-app/${{ matrix.site }}/
+    strategy:
+      fail-fast: false # site này lỗi không chặn site khác
+      matrix:
+        site: ${{ fromJSON(needs.plan.outputs.sites) }}
+    # Lần chạy mới của cùng một site thay cho lần đang chờ; các site khác chạy độc lập.
+    concurrency:
+      group: deploy-${{ matrix.site }}
+      cancel-in-progress: false
+    env:
+      SITE: ${{ matrix.site }}
+      SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read site config
+        id: conf
+        run: grep -E '^(VAULT_REPO|VAULT_REF)=' "sites/$SITE/site.conf" >> "$GITHUB_OUTPUT"
+      - name: Checkout vault
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ steps.conf.outputs.VAULT_REPO }}
+          ref: ${{ steps.conf.outputs.VAULT_REF }}
+          path: .vault
+          fetch-depth: 0 # Cần toàn bộ lịch sử để lấy ngày sửa của từng note
+          token: ${{ secrets.SECRET_KEY }} # PAT đọc được các vault private
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: bash scripts/build-site.sh "$SITE" .vault -o "out/$SITE"
+      - name: Publish to gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bash scripts/publish-site.sh "$SITE" "out/$SITE"
+
+      # Thông báo chỉ chạy khi có secret tương ứng
+      - name: Notify Slack
+        if: env.SLACK_BOT_TOKEN != ''
+        uses: slackapi/slack-github-action@v2.1.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            channel: ${{ secrets.SLACK_CHANNEL_ID }}
+            text: "🚀 Deploy ${{ matrix.site }} thành công!\n🔗 URL: https://hugmanh.github.io/docs-app/${{ matrix.site }}/"
+      - name: Notify Telegram
+        if: env.TELEGRAM_TOKEN != ''
+        uses: appleboy/telegram-action@v1.1.1
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: "🚀 Deploy ${{ matrix.site }} thành công!\n🔗 URL: https://hugmanh.github.io/docs-app/${{ matrix.site }}/"
