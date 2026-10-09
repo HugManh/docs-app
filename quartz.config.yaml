@@ -9,7 +9,7 @@ configuration:
   enablePopovers: true
   analytics: null
   locale: vi-VN
-  baseUrl: hugmanh.github.io/brain-IT
+  baseUrl: hugmanh.github.io/docs-app
   ignorePatterns:
     - private
     - templates

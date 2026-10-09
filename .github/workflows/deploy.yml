@@ -1,0 +1,82 @@
+name: Deploy Brain-IT
+
+# Nội dung nằm ở vault private HugManh/brain-IT. Khi vault thay đổi, workflow bên đó
+# gọi workflow_dispatch vào nhánh v5 của repo này để build và deploy lên GitHub Pages.
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - v5
+
+run-name: ${{ github.actor }} deploy Brain-IT 🚀
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    # SECRET_KEY (PAT đọc được repo brain-IT) nằm trong environment này
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout vault (HugManh/brain-IT)
+        uses: actions/checkout@v4
+        with:
+          repository: HugManh/brain-IT
+          path: .vault
+          fetch-depth: 0 # Cần toàn bộ lịch sử để lấy ngày sửa của từng note
+          token: ${{ secrets.SECRET_KEY }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Quartz plugins
+        run: npm run install-plugins
+      - name: Build content from vault
+        run: bash scripts/sync-vault.sh .vault content
+      - name: Build Quartz
+        run: npx quartz build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    env:
+      SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      # Thông báo chỉ chạy khi secret tương ứng có trong environment github-pages
+      - name: Notify Slack
+        if: env.SLACK_BOT_TOKEN != ''
+        uses: slackapi/slack-github-action@v2.1.0
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          payload: |
+            channel: ${{ secrets.SLACK_CHANNEL_ID }}
+            text: "🚀 Deploy thành công lên GitHub Pages!\n🔗 URL: ${{ steps.deployment.outputs.page_url }}"
+      - name: Notify Telegram
+        if: env.TELEGRAM_TOKEN != ''
+        uses: appleboy/telegram-action@v1.1.1
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: "🚀 Deploy thành công lên GitHub Pages!\n🔗 URL: ${{ steps.deployment.outputs.page_url }}"
