@@ -1,774 +1,511 @@
 <!DOCTYPE html>
-<html lang="vi" dir="ltr"><head><title>Filtering · Brain-IT</title><meta charset="utf-8"/><link rel="preload" href="../index-5875a903.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be Vietnam Pro:wght@400;700&amp;family=Be Vietnam Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Brain-IT"/><meta property="og:title" content="Filtering · Brain-IT"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Filtering · Brain-IT"/><meta name="twitter:description" content/><meta property="og:description" content/><meta property="og:image:alt" content/><meta property="twitter:domain" content="hugmanh.github.io/docs-app/brain-it"/><meta property="og:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/filtering"/><meta property="twitter:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/filtering"/><link rel="icon" href="../static/icon.png"/><meta name="description" content/><meta name="generator" content="Quartz"/><link href="../index-5875a903.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7f220492.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://hugmanh.github.io/docs-app/brain-it/notes/filtering-og-image.webp"/><meta property="og:image:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/filtering-og-image.webp"/><meta name="twitter:image" content="https://hugmanh.github.io/docs-app/brain-it/notes/filtering-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="notes/filtering" data-basepath="/docs-app/brain-it"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Brain-IT</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="Tìm" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Tìm</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Tìm kiếm thông tin" placeholder="Tìm kiếm thông tin"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Chế độ tối"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Chế độ tối"><title>Chế độ tối</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Chế độ sáng"><title>Chế độ sáng</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Chế độ đọc"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Chế độ đọc"><title>Chế độ đọc</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="open" data-savestate="false" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;node=>![\&quot;notes\&quot;,\&quot;assets\&quot;,\&quot;tags\&quot;].includes(node.slugSegment)&quot;,&quot;mapFn&quot;:&quot;node=>{node.isFolder||(node.displayName=node.displayName.replace(/\\s*MOC$/i,\&quot;\&quot;))}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-49" aria-label="Nội dung"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Khám phá</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-49" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Trang chủ</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../notes/">Tất cả ghi chú</a></div></nav><h1 class="article-title">Filtering</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-03T10:53:36.000Z">03 thg 9, 2026</time><span>7 phút đọc</span></p><ul class="tags"><li><a href="../tags/api" class="internal tag-link">api</a></li></ul></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="chương-10-filtering">Chương 10. Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chương-10-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
-<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="md" data-theme="github-light github-dark"><code data-language="md" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># 10. Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Purpose</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Filtering cho phép Client chỉ lấy những Resource thỏa mãn các điều kiện cụ thể thay vì tải toàn bộ dữ liệu.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Một cơ chế Filtering tốt giúp:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Giảm dữ liệu truyền tải.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Giảm xử lý phía Client.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Tăng hiệu năng hệ thống.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Hỗ trợ tìm kiếm theo nhiều tiêu chí.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Dễ mở rộng khi bổ sung điều kiện mới.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Filtering chỉ thay đổi tập dữ liệu trả về, không thay đổi Resource.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Rules</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Filtering MUST sử dụng Query Parameters.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Filtering MUST không thay đổi dữ liệu.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Filter Parameter SHOULD có tên rõ ràng.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Các Filter MUST có thể kết hợp với nhau.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Filtering SHOULD hoạt động cùng Pagination và Sorting.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> API MUST bỏ qua các Filter không được hỗ trợ hoặc trả lỗi rõ ràng theo quy ước của hệ thống.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Không sử dụng Path Parameter cho Filtering.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Filtering vs Searching</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?status=ACTIVE</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Chọn các User có trạng thái ACTIVE.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Searching</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?q=john</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Tìm User chứa từ khóa &quot;john&quot;.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Filtering có điều kiện xác định.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Searching thường mang tính gần đúng (fuzzy).</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Basic Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?status=ACTIVE</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">WHERE status = 'ACTIVE'</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /courses?level=N5</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">WHERE level = 'N5'</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Multiple Filters</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?status=ACTIVE</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">&amp;role=ADMIN</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">SQL</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">WHERE</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">status='ACTIVE'</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">AND role='ADMIN'</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Range Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /orders</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?minAmount=100000</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">&amp;maxAmount=500000</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">SQL</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">WHERE</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">amount >= 100000</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">AND amount &lt;= 500000</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ngày tháng</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /orders</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?from=2026-01-01</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">&amp;to=2026-12-31</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Khuyến nghị sử dụng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> from</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> to</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">hoặc</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> startDate</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> endDate</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Chỉ chọn một quy ước trong toàn hệ thống.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Boolean Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đúng</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?enabled=true</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /courses?published=false</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">enabled=1</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">enabled=yes</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Enum Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /orders</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?status=PENDING</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /orders</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?status=COMPLETED</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Giá trị Enum nên được chuẩn hóa và ghi rõ trong OpenAPI.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Filtering by IDs</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?ids=1,2,3</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">SQL</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">WHERE id IN (1,2,3)</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Hoặc</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?ids[]=1&amp;ids[]=2</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Toàn bộ hệ thống chỉ nên sử dụng một cách biểu diễn.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Multiple Values</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /courses</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?level=N4,N5</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">WHERE level IN ('N4','N5')</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Null Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?phone=null</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Khuyến nghị rõ ràng hơn:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?hasPhone=false</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Hoặc</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?phoneExists=false</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Tránh truyền literal </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`&quot;null&quot;`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> nếu có thể.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Date Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Khuyến nghị ISO 8601.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /logs</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?from=2026-07-01T00:00:00Z</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">&amp;to=2026-07-31T23:59:59Z</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">01/07/2026</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Nested Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /courses</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?teacherId=10</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">teacher.id=10</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">trong Query Parameter nếu không có quy ước rõ ràng.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Relationship Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /orders</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?customerId=100</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Lọc Order theo Customer.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Soft Delete</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?includeDeleted=true</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Hoặc</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?deleted=true</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Khuyến nghị chọn một cách và áp dụng nhất quán.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Filter Operators</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Có hai cách phổ biến.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Option 1</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Tên Parameter rõ nghĩa.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">minPrice</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">maxPrice</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">from</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">to</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Khuyến nghị.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Option 2</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Toán tử trong Query.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">price[gte]=100000</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">price[lte]=500000</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Hoặc</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">price.gt=100000</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Phù hợp với các API có bộ lọc động phức tạp.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Recommendation</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đối với đa số Enterprise CRUD API:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ưu tiên</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">minAmount</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">maxAmount</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">from</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">to</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Dễ đọc hơn.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Default Filtering</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên mặc định trả cả dữ liệu đã xóa mềm.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Chỉ trả dữ liệu còn hiệu lực.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Muốn lấy dữ liệu đã xóa:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?includeDeleted=true</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Unknown Filter</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?abc=123</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Có hai lựa chọn.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Option A</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Bỏ qua.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ưu điểm</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Backward Compatible.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nhược điểm</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Client khó phát hiện lỗi.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Option B</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">400 Bad Request</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Khuyến nghị cho Internal API và Enterprise API để phát hiện lỗi sớm.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Filtering + Pagination</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?status=ACTIVE</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">&amp;page=1</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">&amp;pageSize=20</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Thứ tự xử lý</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Filter</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Sort</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Pagination</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên Pagination trước.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Filtering + Sorting</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?status=ACTIVE</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">&amp;sort=-createdAt</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không có xung đột.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Performance</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">LOWER(name)</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">trong WHERE nếu không có Index phù hợp.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">LIKE '%abc%'</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">trên bảng hàng triệu bản ghi nếu không có Full-text Search hoặc Search Engine.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Index Recommendation</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">WHERE status='ACTIVE'</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nên có</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">INDEX(status)</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">WHERE</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">status='ACTIVE'</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">AND created_at > ...</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Composite Index</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```sql</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(status, created_at)</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Prisma Example</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```ts</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> prisma.user.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">findMany</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">({</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  where: {</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    status: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ACTIVE'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    role: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ADMIN'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  },</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">});</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Range</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```ts</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> prisma.order.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">findMany</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">({</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  where: {</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    amount: {</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">      gte: minAmount,</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">      lte: maxAmount,</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    },</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  },</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">});</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># NestJS DTO</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```ts</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="property"> UserFilterDto</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> {</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsOptional</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">()</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsEnum</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(UserStatus)</span></span>
+<html lang="vi" dir="ltr"><head><title>Filtering · Brain-IT</title><meta charset="utf-8"/><link rel="preload" href="../index-5875a903.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be Vietnam Pro:wght@400;700&amp;family=Be Vietnam Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Brain-IT"/><meta property="og:title" content="Filtering · Brain-IT"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Filtering · Brain-IT"/><meta name="twitter:description" content/><meta property="og:description" content/><meta property="og:image:alt" content/><meta property="twitter:domain" content="hugmanh.github.io/docs-app/brain-it"/><meta property="og:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/filtering"/><meta property="twitter:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/filtering"/><link rel="icon" href="../static/icon.png"/><meta name="description" content/><meta name="generator" content="Quartz"/><link href="../index-5875a903.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7f220492.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://hugmanh.github.io/docs-app/brain-it/notes/filtering-og-image.webp"/><meta property="og:image:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/filtering-og-image.webp"/><meta name="twitter:image" content="https://hugmanh.github.io/docs-app/brain-it/notes/filtering-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="notes/filtering" data-basepath="/docs-app/brain-it"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Brain-IT</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="Tìm" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Tìm</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Tìm kiếm thông tin" placeholder="Tìm kiếm thông tin"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Chế độ tối"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Chế độ tối"><title>Chế độ tối</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Chế độ sáng"><title>Chế độ sáng</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Chế độ đọc"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Chế độ đọc"><title>Chế độ đọc</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="open" data-savestate="false" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;node=>![\&quot;notes\&quot;,\&quot;assets\&quot;,\&quot;tags\&quot;].includes(node.slugSegment)&quot;,&quot;mapFn&quot;:&quot;node=>{node.isFolder||(node.displayName=node.displayName.replace(/\\s*MOC$/i,\&quot;\&quot;))}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-49" aria-label="Nội dung"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Khám phá</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-49" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Trang chủ</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../notes/">Tất cả ghi chú</a></div></nav><h1 class="article-title">Filtering</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-09T03:11:15.000Z">09 thg 10, 2026</time><span>5 phút đọc</span></p><ul class="tags"><li><a href="../tags/api" class="internal tag-link">api</a></li></ul></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="chương-10-filtering">Chương 10. Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chương-10-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="purpose">Purpose<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#purpose" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Filtering cho phép Client chỉ lấy những Resource thỏa mãn các điều kiện cụ thể thay vì tải toàn bộ dữ liệu.</p>
+<p>Một cơ chế Filtering tốt giúp:</p>
+<ul>
+<li>Giảm dữ liệu truyền tải.</li>
+<li>Giảm xử lý phía Client.</li>
+<li>Tăng hiệu năng hệ thống.</li>
+<li>Hỗ trợ tìm kiếm theo nhiều tiêu chí.</li>
+<li>Dễ mở rộng khi bổ sung điều kiện mới.</li>
+</ul>
+<p>Filtering chỉ thay đổi tập dữ liệu trả về, không thay đổi Resource.</p>
+<hr/>
+<h1 id="rules">Rules<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rules" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>Filtering MUST sử dụng Query Parameters.</li>
+<li>Filtering MUST không thay đổi dữ liệu.</li>
+<li>Filter Parameter SHOULD có tên rõ ràng.</li>
+<li>Các Filter MUST có thể kết hợp với nhau.</li>
+<li>Filtering SHOULD hoạt động cùng Pagination và Sorting.</li>
+<li>API MUST bỏ qua các Filter không được hỗ trợ hoặc trả lỗi rõ ràng theo quy ước của hệ thống.</li>
+<li>Không sử dụng Path Parameter cho Filtering.</li>
+</ul>
+<hr/>
+<h1 id="filtering-vs-searching">Filtering vs Searching<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#filtering-vs-searching" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Filtering</p>
+<pre><code>GET /users?status=ACTIVE
+</code></pre>
+<p>↓</p>
+<p>Chọn các User có trạng thái ACTIVE.</p>
+<hr/>
+<p>Searching</p>
+<pre><code>GET /users?q=john
+</code></pre>
+<p>↓</p>
+<p>Tìm User chứa từ khóa “john”.</p>
+<p>Filtering có điều kiện xác định.</p>
+<p>Searching thường mang tính gần đúng (fuzzy).</p>
+<hr/>
+<h1 id="basic-filtering">Basic Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#basic-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /users?status=ACTIVE
+</code></pre>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">WHERE</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> status</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'ACTIVE'</span></span></code></pre></figure>
+<hr/>
+<pre><code>GET /courses?level=N5
+</code></pre>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">WHERE</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> level</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'N5'</span></span></code></pre></figure>
+<hr/>
+<h1 id="multiple-filters">Multiple Filters<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multiple-filters" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /users
+
+?status=ACTIVE
+
+&amp;role=ADMIN
+</code></pre>
+<p>SQL</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">WHERE</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">status=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ACTIVE'</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">AND</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> role=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ADMIN'</span></span></code></pre></figure>
+<hr/>
+<h1 id="range-filtering">Range Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#range-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /orders
+
+?minAmount=100000
+
+&amp;maxAmount=500000
+</code></pre>
+<p>SQL</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">WHERE</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">amount </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 100000</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">AND</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> amount </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 500000</span></span></code></pre></figure>
+<hr/>
+<p>Ngày tháng</p>
+<pre><code>GET /orders
+
+?from=2026-01-01
+
+&amp;to=2026-12-31
+</code></pre>
+<hr/>
+<p>Khuyến nghị sử dụng:</p>
+<ul>
+<li>from</li>
+<li>to</li>
+</ul>
+<p>hoặc</p>
+<ul>
+<li>startDate</li>
+<li>endDate</li>
+</ul>
+<p>Chỉ chọn một quy ước trong toàn hệ thống.</p>
+<hr/>
+<h1 id="boolean-filtering">Boolean Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#boolean-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Đúng</p>
+<pre><code>GET /users?enabled=true
+</code></pre>
+<pre><code>GET /courses?published=false
+</code></pre>
+<p>Không nên</p>
+<pre><code>enabled=1
+
+enabled=yes
+</code></pre>
+<hr/>
+<h1 id="enum-filtering">Enum Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#enum-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<pre><code>GET /orders
+
+?status=PENDING
+</code></pre>
+<pre><code>GET /orders
+
+?status=COMPLETED
+</code></pre>
+<p>Giá trị Enum nên được chuẩn hóa và ghi rõ trong OpenAPI.</p>
+<hr/>
+<h1 id="filtering-by-ids">Filtering by IDs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#filtering-by-ids" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /users?ids=1,2,3
+</code></pre>
+<p>SQL</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">WHERE</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> id </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">IN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></figure>
+<p>Hoặc</p>
+<pre><code>GET /users?ids[]=1&amp;ids[]=2
+</code></pre>
+<p>Toàn bộ hệ thống chỉ nên sử dụng một cách biểu diễn.</p>
+<hr/>
+<h1 id="multiple-values">Multiple Values<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multiple-values" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /courses
+
+?level=N4,N5
+</code></pre>
+<p>↓</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">WHERE</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> level</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> IN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'N4'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'N5'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></figure>
+<hr/>
+<h1 id="null-filtering">Null Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#null-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /users?phone=null
+</code></pre>
+<p>Khuyến nghị rõ ràng hơn:</p>
+<pre><code>GET /users?hasPhone=false
+</code></pre>
+<p>Hoặc</p>
+<pre><code>GET /users?phoneExists=false
+</code></pre>
+<p>Tránh truyền literal <code>&quot;null&quot;</code> nếu có thể.</p>
+<hr/>
+<h1 id="date-filtering">Date Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#date-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Khuyến nghị ISO 8601.</p>
+<pre><code>GET /logs
+
+?from=2026-07-01T00:00:00Z
+
+&amp;to=2026-07-31T23:59:59Z
+</code></pre>
+<p>Không nên</p>
+<pre><code>01/07/2026
+</code></pre>
+<hr/>
+<h1 id="nested-filtering">Nested Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#nested-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /courses
+
+?teacherId=10
+</code></pre>
+<p>Không nên</p>
+<pre><code>teacher.id=10
+</code></pre>
+<p>trong Query Parameter nếu không có quy ước rõ ràng.</p>
+<hr/>
+<h1 id="relationship-filtering">Relationship Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#relationship-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /orders
+
+?customerId=100
+</code></pre>
+<p>↓</p>
+<p>Lọc Order theo Customer.</p>
+<hr/>
+<h1 id="soft-delete">Soft Delete<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#soft-delete" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /users?includeDeleted=true
+</code></pre>
+<p>Hoặc</p>
+<pre><code>GET /users?deleted=true
+</code></pre>
+<p>Khuyến nghị chọn một cách và áp dụng nhất quán.</p>
+<hr/>
+<h1 id="filter-operators">Filter Operators<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#filter-operators" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Có hai cách phổ biến.</p>
+<h2 id="option-1">Option 1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#option-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Tên Parameter rõ nghĩa.</p>
+<pre><code>minPrice
+
+maxPrice
+
+from
+
+to
+</code></pre>
+<p>Khuyến nghị.</p>
+<hr/>
+<h2 id="option-2">Option 2<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#option-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Toán tử trong Query.</p>
+<pre><code>price[gte]=100000
+
+price[lte]=500000
+</code></pre>
+<p>Hoặc</p>
+<pre><code>price.gt=100000
+</code></pre>
+<p>Phù hợp với các API có bộ lọc động phức tạp.</p>
+<hr/>
+<h1 id="recommendation">Recommendation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#recommendation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Đối với đa số Enterprise CRUD API:</p>
+<p>Ưu tiên</p>
+<pre><code>minAmount
+
+maxAmount
+
+from
+
+to
+</code></pre>
+<p>Dễ đọc hơn.</p>
+<hr/>
+<h1 id="default-filtering">Default Filtering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#default-filtering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Không nên mặc định trả cả dữ liệu đã xóa mềm.</p>
+<p>Ví dụ</p>
+<pre><code>GET /users
+</code></pre>
+<p>↓</p>
+<p>Chỉ trả dữ liệu còn hiệu lực.</p>
+<p>Muốn lấy dữ liệu đã xóa:</p>
+<pre><code>GET /users?includeDeleted=true
+</code></pre>
+<hr/>
+<h1 id="unknown-filter">Unknown Filter<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#unknown-filter" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /users?abc=123
+</code></pre>
+<p>Có hai lựa chọn.</p>
+<h2 id="option-a">Option A<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#option-a" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Bỏ qua.</p>
+<p>Ưu điểm</p>
+<ul>
+<li>Backward Compatible.</li>
+</ul>
+<p>Nhược điểm</p>
+<ul>
+<li>Client khó phát hiện lỗi.</li>
+</ul>
+<hr/>
+<h2 id="option-b">Option B<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#option-b" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><code>400 Bad Request
+</code></pre>
+<p>Khuyến nghị cho Internal API và Enterprise API để phát hiện lỗi sớm.</p>
+<hr/>
+<h1 id="filtering--pagination">Filtering + Pagination<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#filtering--pagination" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<pre><code>GET /users
+
+?status=ACTIVE
+
+&amp;page=1
+
+&amp;pageSize=20
+</code></pre>
+<p>Thứ tự xử lý</p>
+<pre><code>Filter
+
+↓
+
+Sort
+
+↓
+
+Pagination
+</code></pre>
+<p>Không nên Pagination trước.</p>
+<hr/>
+<h1 id="filtering--sorting">Filtering + Sorting<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#filtering--sorting" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<pre><code>GET /users
+
+?status=ACTIVE
+
+&amp;sort=-createdAt
+</code></pre>
+<p>Không có xung đột.</p>
+<hr/>
+<h1 id="performance">Performance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#performance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Không nên</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">LOWER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></figure>
+<p>trong WHERE nếu không có Index phù hợp.</p>
+<p>Không nên</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">LIKE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '%abc%'</span></span></code></pre></figure>
+<p>trên bảng hàng triệu bản ghi nếu không có Full-text Search hoặc Search Engine.</p>
+<hr/>
+<h1 id="index-recommendation">Index Recommendation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#index-recommendation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">WHERE</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> status=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ACTIVE'</span></span></code></pre></figure>
+<p>↓</p>
+<p>Nên có</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">INDEX</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">status</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></figure>
+<hr/>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">WHERE</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">status=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ACTIVE'</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">AND</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> created_at </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ...</span></span></code></pre></figure>
+<p>↓</p>
+<p>Composite Index</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="sql" data-theme="github-light github-dark"><code data-language="sql" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">status</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, created_at)</span></span></code></pre></figure>
+<hr/>
+<h1 id="prisma-example">Prisma Example<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#prisma-example" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="ts" data-theme="github-light github-dark"><code data-language="ts" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> prisma.user.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">findMany</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">({</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  where: {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    status: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ACTIVE'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    role: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ADMIN'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">});</span></span></code></pre></figure>
+<p>Range</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="ts" data-theme="github-light github-dark"><code data-language="ts" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> prisma.order.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">findMany</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">({</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  where: {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    amount: {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">      gte: minAmount,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">      lte: maxAmount,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">});</span></span></code></pre></figure>
+<hr/>
+<h1 id="nestjs-dto">NestJS DTO<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#nestjs-dto" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="ts" data-theme="github-light github-dark"><code data-language="ts" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="property"> UserFilterDto</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsOptional</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsEnum</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(UserStatus)</span></span>
 <span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="normal">  status</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="property"> UserStatus</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
 <span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsOptional</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">()</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsEnum</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(UserRole)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsOptional</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsEnum</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(UserRole)</span></span>
 <span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="normal">  role</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="property"> UserRole</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
 <span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsOptional</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">()</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Number)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsOptional</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Number)</span></span>
 <span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="normal">  minAge</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="property"> number</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
 <span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsOptional</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">()</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Number)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">IsOptional</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Number)</span></span>
 <span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="normal">  maxAge</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="property"> number</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Decision Tree</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Muốn lọc dữ liệu?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        ▼</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Điều kiện bằng?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">status=ACTIVE</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">──────────────</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Khoảng giá trị?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">min / max</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">──────────────</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Ngày tháng?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">from / to</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">──────────────</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Nhiều giá trị?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">ids=1,2,3</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">──────────────</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Kết hợp?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">↓</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">AND</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Common Mistakes</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">❌</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users/ACTIVE</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">✔</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?status=ACTIVE</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">❌</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Body:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">{</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  &quot;status&quot;:&quot;ACTIVE&quot;</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">}</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">✔</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?status=ACTIVE</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">❌</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /orders</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?price=100000-500000</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">✔</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /orders</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?minAmount=100000</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">&amp;maxAmount=500000</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">❌</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?deleted=1</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">✔</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">?includeDeleted=true</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Trade-offs</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Thiết kế | Ưu điểm | Nhược điểm |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">|----------|----------|------------|</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`min`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> / </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`max`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> | Dễ đọc | Nhiều tham số hơn |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`price[gte]`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> | Linh hoạt | Khó đọc hơn |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Bỏ qua Filter lạ | Backward Compatible | Khó phát hiện lỗi |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Trả </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`400`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> | Phát hiện lỗi sớm | Cần Client sửa Request |</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Best Practices</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Dùng Query Parameter cho Filtering.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Tên Filter rõ ràng và dễ hiểu.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Chuẩn hóa cách biểu diễn khoảng giá trị.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Hỗ trợ kết hợp nhiều Filter.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Luôn Filter trước rồi mới Sort và Pagination.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Thiết kế Index theo các Filter phổ biến.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Không lạm dụng </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`LIKE '%keyword%'`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> trên dữ liệu lớn.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Chỉ chọn một quy ước biểu diễn nhiều giá trị cho toàn hệ thống.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Checklist</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Filtering sử dụng Query Parameter.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Không sử dụng Path cho Filtering.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Hỗ trợ nhiều Filter cùng lúc.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Khoảng giá trị dùng </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`min/max`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> hoặc </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`from/to`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> thống nhất.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Boolean dùng </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`true/false`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Enum được chuẩn hóa.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Có Index cho Filter thường dùng.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Filter hoạt động cùng Sorting và Pagination.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Quy định rõ cách xử lý Filter không hợp lệ.</span></span></code></pre></figure>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<hr/>
+<h1 id="decision-tree">Decision Tree<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#decision-tree" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<pre><code>Muốn lọc dữ liệu?
+
+        │
+        ▼
+
+Điều kiện bằng?
+
+↓
+
+status=ACTIVE
+
+──────────────
+
+Khoảng giá trị?
+
+↓
+
+min / max
+
+──────────────
+
+Ngày tháng?
+
+↓
+
+from / to
+
+──────────────
+
+Nhiều giá trị?
+
+↓
+
+ids=1,2,3
+
+──────────────
+
+Kết hợp?
+
+↓
+
+AND
+</code></pre>
+<hr/>
+<h1 id="common-mistakes">Common Mistakes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#common-mistakes" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>❌</p>
+<pre><code>GET /users/ACTIVE
+</code></pre>
+<p>✔</p>
+<pre><code>GET /users?status=ACTIVE
+</code></pre>
+<hr/>
+<p>❌</p>
+<pre><code>GET /users
+
+Body:
+
+{
+  &quot;status&quot;:&quot;ACTIVE&quot;
+}
+</code></pre>
+<p>✔</p>
+<pre><code>GET /users?status=ACTIVE
+</code></pre>
+<hr/>
+<p>❌</p>
+<pre><code>GET /orders
+
+?price=100000-500000
+</code></pre>
+<p>✔</p>
+<pre><code>GET /orders
+
+?minAmount=100000
+
+&amp;maxAmount=500000
+</code></pre>
+<hr/>
+<p>❌</p>
+<pre><code>GET /users
+
+?deleted=1
+</code></pre>
+<p>✔</p>
+<pre><code>GET /users
+
+?includeDeleted=true
+</code></pre>
+<hr/>
+<h1 id="trade-offs">Trade-offs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trade-offs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Thiết kế</th><th>Ưu điểm</th><th>Nhược điểm</th></tr></thead><tbody><tr><td><code>min</code> / <code>max</code></td><td>Dễ đọc</td><td>Nhiều tham số hơn</td></tr><tr><td><code>price[gte]</code></td><td>Linh hoạt</td><td>Khó đọc hơn</td></tr><tr><td>Bỏ qua Filter lạ</td><td>Backward Compatible</td><td>Khó phát hiện lỗi</td></tr><tr><td>Trả <code>400</code></td><td>Phát hiện lỗi sớm</td><td>Cần Client sửa Request</td></tr></tbody></table></div>
+<hr/>
+<h1 id="best-practices">Best Practices<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#best-practices" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>Dùng Query Parameter cho Filtering.</li>
+<li>Tên Filter rõ ràng và dễ hiểu.</li>
+<li>Chuẩn hóa cách biểu diễn khoảng giá trị.</li>
+<li>Hỗ trợ kết hợp nhiều Filter.</li>
+<li>Luôn Filter trước rồi mới Sort và Pagination.</li>
+<li>Thiết kế Index theo các Filter phổ biến.</li>
+<li>Không lạm dụng <code>LIKE '%keyword%'</code> trên dữ liệu lớn.</li>
+<li>Chỉ chọn một quy ước biểu diễn nhiều giá trị cho toàn hệ thống.</li>
+</ul>
+<hr/>
+<h1 id="checklist">Checklist<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#checklist" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Filtering sử dụng Query Parameter.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Không sử dụng Path cho Filtering.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Hỗ trợ nhiều Filter cùng lúc.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Khoảng giá trị dùng <code>min/max</code> hoặc <code>from/to</code> thống nhất.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Boolean dùng <code>true/false</code>.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Enum được chuẩn hóa.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Có Index cho Filter thường dùng.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Filter hoạt động cùng Sorting và Pagination.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Quy định rõ cách xử lý Filter không hợp lệ.</li>
+</ul>
 <blockquote>
 <p><strong>Ghi chú:</strong> Từ chương này trở đi, các chương <strong>Searching</strong>, <strong>Sorting</strong>, <strong>Field Selection</strong> và <strong>Include/Expand</strong> sẽ được thiết kế để kết hợp hoàn chỉnh với Filtering, tạo thành một chuẩn truy vấn thống nhất cho toàn bộ Collection API.</p>
-</blockquote></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Sơ đồ</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[&quot;moc&quot;],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+</blockquote></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="desktop-only"><div class="toc"><button type="button" class="toc-header" aria-controls="toc-30" aria-expanded="true"><h3>Mục lục</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#chương-10-filtering" data-for="chương-10-filtering">Chương 10. Filtering</a></li><li class="depth-1"><a href="#purpose" data-for="purpose">Purpose</a></li><li class="depth-0"><a href="#rules" data-for="rules">Rules</a></li><li class="depth-0"><a href="#filtering-vs-searching" data-for="filtering-vs-searching">Filtering vs Searching</a></li><li class="depth-0"><a href="#basic-filtering" data-for="basic-filtering">Basic Filtering</a></li><li class="depth-0"><a href="#multiple-filters" data-for="multiple-filters">Multiple Filters</a></li><li class="depth-0"><a href="#range-filtering" data-for="range-filtering">Range Filtering</a></li><li class="depth-0"><a href="#boolean-filtering" data-for="boolean-filtering">Boolean Filtering</a></li><li class="depth-0"><a href="#enum-filtering" data-for="enum-filtering">Enum Filtering</a></li><li class="depth-0"><a href="#filtering-by-ids" data-for="filtering-by-ids">Filtering by IDs</a></li><li class="depth-0"><a href="#multiple-values" data-for="multiple-values">Multiple Values</a></li><li class="depth-0"><a href="#null-filtering" data-for="null-filtering">Null Filtering</a></li><li class="depth-0"><a href="#date-filtering" data-for="date-filtering">Date Filtering</a></li><li class="depth-0"><a href="#nested-filtering" data-for="nested-filtering">Nested Filtering</a></li><li class="depth-0"><a href="#relationship-filtering" data-for="relationship-filtering">Relationship Filtering</a></li><li class="depth-0"><a href="#soft-delete" data-for="soft-delete">Soft Delete</a></li><li class="depth-0"><a href="#filter-operators" data-for="filter-operators">Filter Operators</a></li><li class="depth-1"><a href="#option-1" data-for="option-1">Option 1</a></li><li class="depth-1"><a href="#option-2" data-for="option-2">Option 2</a></li><li class="depth-0"><a href="#recommendation" data-for="recommendation">Recommendation</a></li><li class="depth-0"><a href="#default-filtering" data-for="default-filtering">Default Filtering</a></li><li class="depth-0"><a href="#unknown-filter" data-for="unknown-filter">Unknown Filter</a></li><li class="depth-1"><a href="#option-a" data-for="option-a">Option A</a></li><li class="depth-1"><a href="#option-b" data-for="option-b">Option B</a></li><li class="depth-0"><a href="#filtering--pagination" data-for="filtering--pagination">Filtering + Pagination</a></li><li class="depth-0"><a href="#filtering--sorting" data-for="filtering--sorting">Filtering + Sorting</a></li><li class="depth-0"><a href="#performance" data-for="performance">Performance</a></li><li class="depth-0"><a href="#index-recommendation" data-for="index-recommendation">Index Recommendation</a></li><li class="depth-0"><a href="#prisma-example" data-for="prisma-example">Prisma Example</a></li><li class="depth-0"><a href="#nestjs-dto" data-for="nestjs-dto">NestJS DTO</a></li><li class="depth-0"><a href="#decision-tree" data-for="decision-tree">Decision Tree</a></li><li class="depth-0"><a href="#common-mistakes" data-for="common-mistakes">Common Mistakes</a></li><li class="depth-0"><a href="#trade-offs" data-for="trade-offs">Trade-offs</a></li><li class="depth-0"><a href="#best-practices" data-for="best-practices">Best Practices</a></li><li class="depth-0"><a href="#checklist" data-for="checklist">Checklist</a></li><li class="overflow-end"></li></ul></div></div><div class="graph"><h3>Sơ đồ</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[&quot;moc&quot;],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
                 s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
                 c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
                 C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829

@@ -1,715 +1,512 @@
 <!DOCTYPE html>
-<html lang="vi" dir="ltr"><head><title>URI Design · Brain-IT</title><meta charset="utf-8"/><link rel="preload" href="../index-5875a903.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be Vietnam Pro:wght@400;700&amp;family=Be Vietnam Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Brain-IT"/><meta property="og:title" content="URI Design · Brain-IT"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="URI Design · Brain-IT"/><meta name="twitter:description" content/><meta property="og:description" content/><meta property="og:image:alt" content/><meta property="twitter:domain" content="hugmanh.github.io/docs-app/brain-it"/><meta property="og:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/uri-design"/><meta property="twitter:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/uri-design"/><link rel="icon" href="../static/icon.png"/><meta name="description" content/><meta name="generator" content="Quartz"/><link href="../index-5875a903.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7f220492.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://hugmanh.github.io/docs-app/brain-it/notes/uri-design-og-image.webp"/><meta property="og:image:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/uri-design-og-image.webp"/><meta name="twitter:image" content="https://hugmanh.github.io/docs-app/brain-it/notes/uri-design-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="notes/uri-design" data-basepath="/docs-app/brain-it"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Brain-IT</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="Tìm" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Tìm</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Tìm kiếm thông tin" placeholder="Tìm kiếm thông tin"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Chế độ tối"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Chế độ tối"><title>Chế độ tối</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Chế độ sáng"><title>Chế độ sáng</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Chế độ đọc"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Chế độ đọc"><title>Chế độ đọc</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="open" data-savestate="false" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;node=>![\&quot;notes\&quot;,\&quot;assets\&quot;,\&quot;tags\&quot;].includes(node.slugSegment)&quot;,&quot;mapFn&quot;:&quot;node=>{node.isFolder||(node.displayName=node.displayName.replace(/\\s*MOC$/i,\&quot;\&quot;))}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-154" aria-label="Nội dung"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Khám phá</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-154" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Trang chủ</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../notes/">Tất cả ghi chú</a></div></nav><h1 class="article-title">URI Design</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-03T10:53:36.000Z">03 thg 9, 2026</time><span>7 phút đọc</span></p><ul class="tags"><li><a href="../tags/api" class="internal tag-link">api</a></li></ul></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="chương-3-uri-design">Chương 3. URI Design<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chương-3-uri-design" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
-<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="md" data-theme="github-light github-dark"><code data-language="md" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># 3. URI Design</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Purpose</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">URI (Uniform Resource Identifier) là điểm tiếp xúc đầu tiên giữa Client và API. Một URI được thiết kế tốt giúp API dễ đọc, dễ ghi nhớ, dễ dự đoán và duy trì tính nhất quán trên toàn hệ thống.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Mục tiêu của chương này là chuẩn hóa cách thiết kế URI để mọi endpoint trong hệ thống đều tuân theo cùng một quy ước.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Rules</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> URI MUST đại diện cho Resource.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> URI MUST sử dụng danh từ (noun).</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Resource Collection MUST sử dụng số nhiều (plural).</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> URI MUST sử dụng chữ thường (lowercase).</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> URI SHOULD sử dụng dấu gạch ngang (</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`-`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">) để phân tách từ.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> URI MUST NOT chứa động từ.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> URI SHOULD ổn định theo thời gian.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Path Parameter MUST dùng để định danh Resource.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Query Parameter MUST dùng để lọc, sắp xếp và phân trang.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> URI MUST NOT phản ánh cấu trúc database hoặc implementation.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># URI Anatomy</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /api/v1/users/123/orders?status=paid&amp;page=1&amp;pageSize=20</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Thành phần | Giá trị |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">|------------|----------|</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Base Path | </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`/api`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Version | </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`/v1`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Collection | </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`/users`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Resource ID | </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`123`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Child Resource | </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`/orders`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Query | </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`status=paid&amp;page=1&amp;pageSize=20`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> |</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Resource Naming</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Rule</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">URI phải biểu diễn Resource.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đúng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/orders</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/courses</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/categories</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Sai:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/getUsers</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/createUser</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/saveOrder</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/updateCourse</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Why</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">HTTP Method đã biểu diễn hành động.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">PATCH /users/10</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">DELETE /users/10</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không cần lặp lại hành động trong URI.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Plural Nouns</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Rule</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Collection MUST sử dụng danh từ số nhiều.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đúng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/orders</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/courses</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Sai:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/user</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/order</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/course</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Why</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Collection luôn đại diện cho nhiều resource.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ngay cả khi:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users/1</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">thì </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`/users`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> vẫn là collection.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Exception</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nếu Resource bản chất không đếm được:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/equipment</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/news</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/information</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Có thể giữ nguyên.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Lowercase</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Rule</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">URI MUST sử dụng chữ thường.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đúng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/course-categories</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Sai:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/Users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/UserList</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/CourseCategories</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Why</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Một số Web Server phân biệt hoa/thường.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/Users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">có thể là hai endpoint khác nhau.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Word Separator</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Rule</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nên sử dụng dấu </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`-`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đúng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/course-categories</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/user-profiles</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không khuyến nghị:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/course_categories</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/courseCategories</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Why</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Dễ đọc hơn.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đặc biệt với URI dài.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># No Verb</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không đưa động từ vào URI.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Sai:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/create-user</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/get-users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/update-course</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/delete-order</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đúng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">PATCH /courses/{id}</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">DELETE /orders/{id}</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Stable URI</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">URI không nên thay đổi theo UI.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Sai:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/mobile/users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/web/users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/admin/users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nên:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Authorization quyết định quyền truy cập, không phải URI.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Path Parameters</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Rule</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Path Parameter dùng để định danh Resource.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đúng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users/10</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /courses/5</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Sai:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?id=10</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">khi đang truy cập một resource cụ thể.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Query Parameters</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Rule</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Query Parameter dùng cho:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> filtering</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> pagination</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> sorting</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> searching</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> field selection</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?page=1&amp;pageSize=20</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /courses?status=published</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /orders?sort=createdAt</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?q=john</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Nested Resource</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Rule</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nested Resource dùng để biểu diễn quan hệ sở hữu (ownership).</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users/10/orders</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">nghĩa là:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Orders thuộc User 10.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên lồng quá sâu.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đúng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/users/10/orders</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không khuyến nghị:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/users/10/orders/8/items/20/comments/5</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation">## Why</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">URI dài gây khó đọc và khó bảo trì.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Resource vs Relationship</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/users/10/orders</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nếu Order tồn tại độc lập:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/orders/99</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">nên ưu tiên truy cập trực tiếp.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nested Resource không nên thay thế endpoint gốc.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Action Endpoint</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Có một số hành động không phải CRUD.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Ví dụ:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /orders/10/cancel</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /orders/10/pay</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /users/10/reset-password</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đây là ngoại lệ được chấp nhận khi:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> hành động mang tính nghiệp vụ</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> không thể biểu diễn bằng CRUD</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># File Resource</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đúng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/files</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/files/{id}</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/uploadFile</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/downloadFile</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Upload và Download sẽ được phân tích ở chương riêng.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Current User</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/users/123/profile</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">nếu Client chỉ được thao tác trên chính mình.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nên:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /me</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">PATCH /me</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /me/orders</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Search Endpoint</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nếu tìm kiếm đơn giản:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?q=john</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nếu tìm kiếm phức tạp:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /users/search</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">để truyền body lớn.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /searchUser</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Batch Endpoint</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Có thể sử dụng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /users/batch</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /users/bulk</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Sẽ được chuẩn hóa ở chương Bulk Operations.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="tag">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Versioning</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Nếu version nằm trên URI:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/v1/users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không nên:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/users/v1</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">hoặc:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">/version1/users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># URI Length</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Không có giới hạn trong HTTP RFC.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Tuy nhiên nên:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> dưới 2 KB</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> tránh query quá dài</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> tránh nested quá nhiều tầng</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Trade-offs</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Quyết định | Ưu điểm | Nhược điểm |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">|------------|----------|------------|</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Plural Resource | Nhất quán | Người mới có thể thấy lạ |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Nested Resource | Biểu diễn quan hệ rõ ràng | URI dài |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Action Endpoint | Dễ hiểu nghiệp vụ | Không thuần REST |</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">| Lowercase | Tránh lỗi | Không có |</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Decision Tree</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Đang tạo endpoint?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        ▼</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Có phải Resource?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">      Có │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        ▼</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Dùng danh từ</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        ▼</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Collection?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">      Có │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        ▼</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Dùng số nhiều</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        ▼</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Có quan hệ sở hữu?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">     Có │ Không</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        ▼</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Nested Resource</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        ▼</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">Có phải Action đặc biệt?</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">     Có │</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        ▼</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /resource/{id}/action</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Examples</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Đúng:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users/10</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users/10/orders</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /orders</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">PATCH /orders/5</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">DELETE /orders/5</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /course-categories</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Sai:</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /getUsers</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /createUser</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /deleteOrder</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /User</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /Users</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /userOrders</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /users?id=10</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Counter Examples</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">❌</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /updateCourseName</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">✔</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">PATCH /courses/{id}</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">❌</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">GET /DeleteUser</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">✔</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">DELETE /users/{id}</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">❌</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /user/create</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">✔</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">POST /users</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Best Practices</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> URI luôn biểu diễn Resource.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> HTTP Method biểu diễn hành động.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Dùng danh từ số nhiều.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Dùng chữ thường.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Dùng dấu </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`-`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> để phân tách từ.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Không để implementation ảnh hưởng URI.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Không thiết kế URI theo màn hình giao diện.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Chỉ dùng Nested Resource khi biểu diễn quan hệ sở hữu.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> Giữ URI ngắn, ổn định và dễ dự đoán.</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># NestJS Example</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```ts</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">@</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Controller</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'users'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">)</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="property"> UserController</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> {</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">()</span></span>
+<html lang="vi" dir="ltr"><head><title>URI Design · Brain-IT</title><meta charset="utf-8"/><link rel="preload" href="../index-5875a903.css" as="style"/><link rel="preload" href="../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be Vietnam Pro:wght@400;700&amp;family=Be Vietnam Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Brain-IT"/><meta property="og:title" content="URI Design · Brain-IT"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="URI Design · Brain-IT"/><meta name="twitter:description" content/><meta property="og:description" content/><meta property="og:image:alt" content/><meta property="twitter:domain" content="hugmanh.github.io/docs-app/brain-it"/><meta property="og:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/uri-design"/><meta property="twitter:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/uri-design"/><link rel="icon" href="../static/icon.png"/><meta name="description" content/><meta name="generator" content="Quartz"/><link href="../index-5875a903.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-7f220492.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-9857b007.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../static/resource-style-d3a1a224.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted%20Grotesk%3Awght%40400%3B700&amp;family=Source%20Sans%20Pro%3Aital%2Cwght%400%2C400%3B0%2C600%3B1%2C400%3B1%2C600&amp;family=IBM%20Plex%20Mono%3Awght%40400%3B600&amp;display=swap"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://hugmanh.github.io/docs-app/brain-it/notes/uri-design-og-image.webp"/><meta property="og:image:url" content="https://hugmanh.github.io/docs-app/brain-it/notes/uri-design-og-image.webp"/><meta name="twitter:image" content="https://hugmanh.github.io/docs-app/brain-it/notes/uri-design-og-image.webp"/><meta property="og:image:type" content="image/webp"/></head><body data-slug="notes/uri-design" data-basepath="/docs-app/brain-it"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Brain-IT</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="Tìm" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Tìm</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Tìm kiếm thông tin" placeholder="Tìm kiếm thông tin"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="Chế độ tối"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Chế độ tối"><title>Chế độ tối</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Chế độ sáng"><title>Chế độ sáng</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="Chế độ đọc"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Chế độ đọc"><title>Chế độ đọc</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="open" data-savestate="false" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;node=>![\&quot;notes\&quot;,\&quot;assets\&quot;,\&quot;tags\&quot;].includes(node.slugSegment)&quot;,&quot;mapFn&quot;:&quot;node=>{node.isFolder||(node.displayName=node.displayName.replace(/\\s*MOC$/i,\&quot;\&quot;))}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-154" aria-label="Nội dung"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Khám phá</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-154" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Trang chủ</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../notes/">Tất cả ghi chú</a></div></nav><h1 class="article-title">URI Design</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-09T03:11:15.000Z">09 thg 10, 2026</time><span>5 phút đọc</span></p><ul class="tags"><li><a href="../tags/api" class="internal tag-link">api</a></li></ul></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><h1 id="chương-3-uri-design">Chương 3. URI Design<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chương-3-uri-design" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="purpose">Purpose<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#purpose" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>URI (Uniform Resource Identifier) là điểm tiếp xúc đầu tiên giữa Client và API. Một URI được thiết kế tốt giúp API dễ đọc, dễ ghi nhớ, dễ dự đoán và duy trì tính nhất quán trên toàn hệ thống.</p>
+<p>Mục tiêu của chương này là chuẩn hóa cách thiết kế URI để mọi endpoint trong hệ thống đều tuân theo cùng một quy ước.</p>
+<hr/>
+<h1 id="rules">Rules<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rules" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>URI MUST đại diện cho Resource.</li>
+<li>URI MUST sử dụng danh từ (noun).</li>
+<li>Resource Collection MUST sử dụng số nhiều (plural).</li>
+<li>URI MUST sử dụng chữ thường (lowercase).</li>
+<li>URI SHOULD sử dụng dấu gạch ngang (<code>-</code>) để phân tách từ.</li>
+<li>URI MUST NOT chứa động từ.</li>
+<li>URI SHOULD ổn định theo thời gian.</li>
+<li>Path Parameter MUST dùng để định danh Resource.</li>
+<li>Query Parameter MUST dùng để lọc, sắp xếp và phân trang.</li>
+<li>URI MUST NOT phản ánh cấu trúc database hoặc implementation.</li>
+</ul>
+<hr/>
+<h1 id="uri-anatomy">URI Anatomy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#uri-anatomy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ:</p>
+<pre><code>GET /api/v1/users/123/orders?status=paid&amp;page=1&amp;pageSize=20
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Thành phần</th><th>Giá trị</th></tr></thead><tbody><tr><td>Base Path</td><td><code>/api</code></td></tr><tr><td>Version</td><td><code>/v1</code></td></tr><tr><td>Collection</td><td><code>/users</code></td></tr><tr><td>Resource ID</td><td><code>123</code></td></tr><tr><td>Child Resource</td><td><code>/orders</code></td></tr><tr><td>Query</td><td><code>status=paid&amp;page=1&amp;pageSize=20</code></td></tr></tbody></table></div>
+<hr/>
+<h1 id="resource-naming">Resource Naming<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#resource-naming" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="rule">Rule<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rule" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>URI phải biểu diễn Resource.</p>
+<p>Đúng:</p>
+<pre><code>/users
+/orders
+/courses
+/categories
+</code></pre>
+<p>Sai:</p>
+<pre><code>/getUsers
+/createUser
+/saveOrder
+/updateCourse
+</code></pre>
+<hr/>
+<h2 id="why">Why<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>HTTP Method đã biểu diễn hành động.</p>
+<p>Ví dụ:</p>
+<pre><code>GET /users
+POST /users
+PATCH /users/10
+DELETE /users/10
+</code></pre>
+<p>Không cần lặp lại hành động trong URI.</p>
+<hr/>
+<h1 id="plural-nouns">Plural Nouns<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#plural-nouns" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="rule-1">Rule<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rule-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Collection MUST sử dụng danh từ số nhiều.</p>
+<p>Đúng:</p>
+<pre><code>/users
+/orders
+/courses
+</code></pre>
+<p>Sai:</p>
+<pre><code>/user
+/order
+/course
+</code></pre>
+<hr/>
+<h2 id="why-1">Why<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Collection luôn đại diện cho nhiều resource.</p>
+<p>Ngay cả khi:</p>
+<pre><code>GET /users/1
+</code></pre>
+<p>thì <code>/users</code> vẫn là collection.</p>
+<hr/>
+<h2 id="exception">Exception<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#exception" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Nếu Resource bản chất không đếm được:</p>
+<pre><code>/equipment
+/news
+/information
+</code></pre>
+<p>Có thể giữ nguyên.</p>
+<hr/>
+<h1 id="lowercase">Lowercase<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lowercase" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="rule-2">Rule<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rule-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>URI MUST sử dụng chữ thường.</p>
+<p>Đúng:</p>
+<pre><code>/users
+/course-categories
+</code></pre>
+<p>Sai:</p>
+<pre><code>/Users
+/UserList
+/CourseCategories
+</code></pre>
+<hr/>
+<h2 id="why-2">Why<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Một số Web Server phân biệt hoa/thường.</p>
+<pre><code>/Users
+/users
+</code></pre>
+<p>có thể là hai endpoint khác nhau.</p>
+<hr/>
+<h1 id="word-separator">Word Separator<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#word-separator" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="rule-3">Rule<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rule-3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Nên sử dụng dấu <code>-</code>.</p>
+<p>Đúng:</p>
+<pre><code>/course-categories
+/user-profiles
+</code></pre>
+<p>Không khuyến nghị:</p>
+<pre><code>/course_categories
+/courseCategories
+</code></pre>
+<hr/>
+<h2 id="why-3">Why<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Dễ đọc hơn.</p>
+<p>Đặc biệt với URI dài.</p>
+<hr/>
+<h1 id="no-verb">No Verb<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#no-verb" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Không đưa động từ vào URI.</p>
+<p>Sai:</p>
+<pre><code>/create-user
+/get-users
+/update-course
+/delete-order
+</code></pre>
+<p>Đúng:</p>
+<pre><code>POST /users
+GET /users
+PATCH /courses/{id}
+DELETE /orders/{id}
+</code></pre>
+<hr/>
+<h1 id="stable-uri">Stable URI<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stable-uri" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>URI không nên thay đổi theo UI.</p>
+<p>Sai:</p>
+<pre><code>/mobile/users
+/web/users
+/admin/users
+</code></pre>
+<p>Nên:</p>
+<pre><code>/users
+</code></pre>
+<p>Authorization quyết định quyền truy cập, không phải URI.</p>
+<hr/>
+<h1 id="path-parameters">Path Parameters<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#path-parameters" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="rule-4">Rule<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rule-4" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Path Parameter dùng để định danh Resource.</p>
+<p>Đúng:</p>
+<pre><code>GET /users/10
+</code></pre>
+<pre><code>GET /courses/5
+</code></pre>
+<p>Sai:</p>
+<pre><code>GET /users?id=10
+</code></pre>
+<p>khi đang truy cập một resource cụ thể.</p>
+<hr/>
+<h1 id="query-parameters">Query Parameters<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#query-parameters" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="rule-5">Rule<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rule-5" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Query Parameter dùng cho:</p>
+<ul>
+<li>filtering</li>
+<li>pagination</li>
+<li>sorting</li>
+<li>searching</li>
+<li>field selection</li>
+</ul>
+<p>Ví dụ:</p>
+<pre><code>GET /users?page=1&amp;pageSize=20
+
+GET /courses?status=published
+
+GET /orders?sort=createdAt
+
+GET /users?q=john
+</code></pre>
+<hr/>
+<h1 id="nested-resource">Nested Resource<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#nested-resource" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="rule-6">Rule<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rule-6" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Nested Resource dùng để biểu diễn quan hệ sở hữu (ownership).</p>
+<p>Ví dụ:</p>
+<pre><code>GET /users/10/orders
+</code></pre>
+<p>nghĩa là:</p>
+<p>Orders thuộc User 10.</p>
+<hr/>
+<p>Không nên lồng quá sâu.</p>
+<p>Đúng:</p>
+<pre><code>/users/10/orders
+</code></pre>
+<p>Không khuyến nghị:</p>
+<pre><code>/users/10/orders/8/items/20/comments/5
+</code></pre>
+<hr/>
+<h2 id="why-4">Why<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-4" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>URI dài gây khó đọc và khó bảo trì.</p>
+<hr/>
+<h1 id="resource-vs-relationship">Resource vs Relationship<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#resource-vs-relationship" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ví dụ:</p>
+<pre><code>/users/10/orders
+</code></pre>
+<p>Nếu Order tồn tại độc lập:</p>
+<pre><code>/orders/99
+</code></pre>
+<p>nên ưu tiên truy cập trực tiếp.</p>
+<p>Nested Resource không nên thay thế endpoint gốc.</p>
+<hr/>
+<h1 id="action-endpoint">Action Endpoint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#action-endpoint" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Có một số hành động không phải CRUD.</p>
+<p>Ví dụ:</p>
+<pre><code>POST /orders/10/cancel
+POST /orders/10/pay
+POST /users/10/reset-password
+</code></pre>
+<p>Đây là ngoại lệ được chấp nhận khi:</p>
+<ul>
+<li>hành động mang tính nghiệp vụ</li>
+<li>không thể biểu diễn bằng CRUD</li>
+</ul>
+<hr/>
+<h1 id="file-resource">File Resource<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#file-resource" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Đúng:</p>
+<pre><code>/files
+/files/{id}
+</code></pre>
+<p>Không nên:</p>
+<pre><code>/uploadFile
+/downloadFile
+</code></pre>
+<p>Upload và Download sẽ được phân tích ở chương riêng.</p>
+<hr/>
+<h1 id="current-user">Current User<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#current-user" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Không nên:</p>
+<pre><code>/users/123/profile
+</code></pre>
+<p>nếu Client chỉ được thao tác trên chính mình.</p>
+<p>Nên:</p>
+<pre><code>GET /me
+PATCH /me
+GET /me/orders
+</code></pre>
+<hr/>
+<h1 id="search-endpoint">Search Endpoint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#search-endpoint" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Nếu tìm kiếm đơn giản:</p>
+<pre><code>GET /users?q=john
+</code></pre>
+<p>Nếu tìm kiếm phức tạp:</p>
+<pre><code>POST /users/search
+</code></pre>
+<p>để truyền body lớn.</p>
+<p>Không nên:</p>
+<pre><code>POST /searchUser
+</code></pre>
+<hr/>
+<h1 id="batch-endpoint">Batch Endpoint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#batch-endpoint" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Có thể sử dụng:</p>
+<pre><code>POST /users/batch
+
+POST /users/bulk
+</code></pre>
+<p>Sẽ được chuẩn hóa ở chương Bulk Operations.</p>
+<hr/>
+<h1 id="versioning">Versioning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#versioning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Nếu version nằm trên URI:</p>
+<pre><code>/v1/users
+</code></pre>
+<p>Không nên:</p>
+<pre><code>/users/v1
+</code></pre>
+<p>hoặc:</p>
+<pre><code>/version1/users
+</code></pre>
+<hr/>
+<h1 id="uri-length">URI Length<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#uri-length" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Không có giới hạn trong HTTP RFC.</p>
+<p>Tuy nhiên nên:</p>
+<ul>
+<li>dưới 2 KB</li>
+<li>tránh query quá dài</li>
+<li>tránh nested quá nhiều tầng</li>
+</ul>
+<hr/>
+<h1 id="trade-offs">Trade-offs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trade-offs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Quyết định</th><th>Ưu điểm</th><th>Nhược điểm</th></tr></thead><tbody><tr><td>Plural Resource</td><td>Nhất quán</td><td>Người mới có thể thấy lạ</td></tr><tr><td>Nested Resource</td><td>Biểu diễn quan hệ rõ ràng</td><td>URI dài</td></tr><tr><td>Action Endpoint</td><td>Dễ hiểu nghiệp vụ</td><td>Không thuần REST</td></tr><tr><td>Lowercase</td><td>Tránh lỗi</td><td>Không có</td></tr></tbody></table></div>
+<hr/>
+<h1 id="decision-tree">Decision Tree<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#decision-tree" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<pre><code>Đang tạo endpoint?
+
+        │
+        ▼
+
+Có phải Resource?
+
+        │
+      Có │
+        ▼
+
+Dùng danh từ
+
+        │
+        ▼
+
+Collection?
+
+        │
+      Có │
+        ▼
+
+Dùng số nhiều
+
+        │
+        ▼
+
+Có quan hệ sở hữu?
+
+        │
+     Có │ Không
+        ▼
+Nested Resource
+
+        │
+        ▼
+
+Có phải Action đặc biệt?
+
+        │
+     Có │
+        ▼
+
+POST /resource/{id}/action
+</code></pre>
+<hr/>
+<h1 id="examples">Examples<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#examples" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Đúng:</p>
+<pre><code>GET /users
+
+GET /users/10
+
+GET /users/10/orders
+
+POST /orders
+
+PATCH /orders/5
+
+DELETE /orders/5
+
+GET /course-categories
+</code></pre>
+<p>Sai:</p>
+<pre><code>GET /getUsers
+
+POST /createUser
+
+POST /deleteOrder
+
+GET /User
+
+GET /Users
+
+GET /userOrders
+
+GET /users?id=10
+</code></pre>
+<hr/>
+<h1 id="counter-examples">Counter Examples<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#counter-examples" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>❌</p>
+<pre><code>POST /updateCourseName
+</code></pre>
+<p>✔</p>
+<pre><code>PATCH /courses/{id}
+</code></pre>
+<hr/>
+<p>❌</p>
+<pre><code>GET /DeleteUser
+</code></pre>
+<p>✔</p>
+<pre><code>DELETE /users/{id}
+</code></pre>
+<hr/>
+<p>❌</p>
+<pre><code>POST /user/create
+</code></pre>
+<p>✔</p>
+<pre><code>POST /users
+</code></pre>
+<hr/>
+<h1 id="best-practices">Best Practices<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#best-practices" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>URI luôn biểu diễn Resource.</li>
+<li>HTTP Method biểu diễn hành động.</li>
+<li>Dùng danh từ số nhiều.</li>
+<li>Dùng chữ thường.</li>
+<li>Dùng dấu <code>-</code> để phân tách từ.</li>
+<li>Không để implementation ảnh hưởng URI.</li>
+<li>Không thiết kế URI theo màn hình giao diện.</li>
+<li>Chỉ dùng Nested Resource khi biểu diễn quan hệ sở hữu.</li>
+<li>Giữ URI ngắn, ổn định và dễ dự đoán.</li>
+</ul>
+<hr/>
+<h1 id="nestjs-example">NestJS Example<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#nestjs-example" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="ts" data-theme="github-light github-dark"><code data-language="ts" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">@</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Controller</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'users'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="property"> UserController</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
 <span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">  findAll</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">() {}</span></span>
 <span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">':id'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">':id'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
 <span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">  findOne</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">() {}</span></span>
 <span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Post</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Post</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
 <span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">  create</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">() {}</span></span>
 <span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Patch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">':id'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Patch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">':id'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
 <span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">  update</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">() {}</span></span>
 <span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Delete</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">':id'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Delete</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">':id'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
 <span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">  remove</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">() {}</span></span>
 <span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span>
 <span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">@</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Controller</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'users/:userId/orders'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">)</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="property"> UserOrderController</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> {</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">@</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Controller</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'users/:userId/orders'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="property"> UserOrderController</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  @</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
 <span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">  findOrders</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">() {}</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Prisma Example</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```ts</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> prisma.user.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">findUnique</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">({</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  where: { id: userId },</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  include: {</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    orders: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">  },</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">});</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">```</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="comment">---</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;" data-token-type="punctuation"># Checklist</span></span>
-<span data-line> </span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] URI biểu diễn Resource.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Không có động từ trong URI.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Collection dùng danh từ số nhiều.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Chỉ sử dụng chữ thường.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Dùng </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">`-`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> để phân tách từ.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Path Parameter chỉ dùng để định danh Resource.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Query Parameter chỉ dùng cho truy vấn.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Nested Resource không quá sâu.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] URI không phụ thuộc UI hoặc Database.</span></span>
-<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [ ] Action Endpoint chỉ dùng cho nghiệp vụ đặc biệt.</span></span></code></pre></figure>
-<p><strong>Tiếp theo:</strong> <strong>Chương 4. Resource Modeling</strong>, sẽ trình bày cách xác định Resource, phân tách Aggregate, mô hình hóa quan hệ (1-1, 1-N, N-N), lựa chọn giữa Resource độc lập và Nested Resource, cùng các nguyên tắc thiết kế mô hình tài nguyên phù hợp với Domain-Driven Design (DDD) và REST.</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Sơ đồ</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[&quot;moc&quot;],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<hr/>
+<h1 id="prisma-example">Prisma Example<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#prisma-example" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="ts" data-theme="github-light github-dark"><code data-language="ts" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> prisma.user.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">findUnique</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">({</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  where: { id: userId },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  include: {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    orders: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">});</span></span></code></pre></figure>
+<hr/>
+<h1 id="checklist">Checklist<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#checklist" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> URI biểu diễn Resource.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Không có động từ trong URI.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Collection dùng danh từ số nhiều.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Chỉ sử dụng chữ thường.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Dùng <code>-</code> để phân tách từ.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Path Parameter chỉ dùng để định danh Resource.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Query Parameter chỉ dùng cho truy vấn.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Nested Resource không quá sâu.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> URI không phụ thuộc UI hoặc Database.</li>
+<li class="task-list-item" data-task=" "><input type="checkbox" class="checkbox-toggle"/> Action Endpoint chỉ dùng cho nghiệp vụ đặc biệt.</li>
+</ul>
+<p><strong>Tiếp theo:</strong> <strong>Chương 4. Resource Modeling</strong>, sẽ trình bày cách xác định Resource, phân tách Aggregate, mô hình hóa quan hệ (1-1, 1-N, N-N), lựa chọn giữa Resource độc lập và Nested Resource, cùng các nguyên tắc thiết kế mô hình tài nguyên phù hợp với Domain-Driven Design (DDD) và REST.</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="desktop-only"><div class="toc"><button type="button" class="toc-header" aria-controls="toc-87" aria-expanded="true"><h3>Mục lục</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#chương-3-uri-design" data-for="chương-3-uri-design">Chương 3. URI Design</a></li><li class="depth-1"><a href="#purpose" data-for="purpose">Purpose</a></li><li class="depth-0"><a href="#rules" data-for="rules">Rules</a></li><li class="depth-0"><a href="#uri-anatomy" data-for="uri-anatomy">URI Anatomy</a></li><li class="depth-0"><a href="#resource-naming" data-for="resource-naming">Resource Naming</a></li><li class="depth-1"><a href="#rule" data-for="rule">Rule</a></li><li class="depth-1"><a href="#why" data-for="why">Why</a></li><li class="depth-0"><a href="#plural-nouns" data-for="plural-nouns">Plural Nouns</a></li><li class="depth-1"><a href="#rule-1" data-for="rule-1">Rule</a></li><li class="depth-1"><a href="#why-1" data-for="why-1">Why</a></li><li class="depth-1"><a href="#exception" data-for="exception">Exception</a></li><li class="depth-0"><a href="#lowercase" data-for="lowercase">Lowercase</a></li><li class="depth-1"><a href="#rule-2" data-for="rule-2">Rule</a></li><li class="depth-1"><a href="#why-2" data-for="why-2">Why</a></li><li class="depth-0"><a href="#word-separator" data-for="word-separator">Word Separator</a></li><li class="depth-1"><a href="#rule-3" data-for="rule-3">Rule</a></li><li class="depth-1"><a href="#why-3" data-for="why-3">Why</a></li><li class="depth-0"><a href="#no-verb" data-for="no-verb">No Verb</a></li><li class="depth-0"><a href="#stable-uri" data-for="stable-uri">Stable URI</a></li><li class="depth-0"><a href="#path-parameters" data-for="path-parameters">Path Parameters</a></li><li class="depth-1"><a href="#rule-4" data-for="rule-4">Rule</a></li><li class="depth-0"><a href="#query-parameters" data-for="query-parameters">Query Parameters</a></li><li class="depth-1"><a href="#rule-5" data-for="rule-5">Rule</a></li><li class="depth-0"><a href="#nested-resource" data-for="nested-resource">Nested Resource</a></li><li class="depth-1"><a href="#rule-6" data-for="rule-6">Rule</a></li><li class="depth-1"><a href="#why-4" data-for="why-4">Why</a></li><li class="depth-0"><a href="#resource-vs-relationship" data-for="resource-vs-relationship">Resource vs Relationship</a></li><li class="depth-0"><a href="#action-endpoint" data-for="action-endpoint">Action Endpoint</a></li><li class="depth-0"><a href="#file-resource" data-for="file-resource">File Resource</a></li><li class="depth-0"><a href="#current-user" data-for="current-user">Current User</a></li><li class="depth-0"><a href="#search-endpoint" data-for="search-endpoint">Search Endpoint</a></li><li class="depth-0"><a href="#batch-endpoint" data-for="batch-endpoint">Batch Endpoint</a></li><li class="depth-0"><a href="#versioning" data-for="versioning">Versioning</a></li><li class="depth-0"><a href="#uri-length" data-for="uri-length">URI Length</a></li><li class="depth-0"><a href="#trade-offs" data-for="trade-offs">Trade-offs</a></li><li class="depth-0"><a href="#decision-tree" data-for="decision-tree">Decision Tree</a></li><li class="depth-0"><a href="#examples" data-for="examples">Examples</a></li><li class="depth-0"><a href="#counter-examples" data-for="counter-examples">Counter Examples</a></li><li class="depth-0"><a href="#best-practices" data-for="best-practices">Best Practices</a></li><li class="depth-0"><a href="#nestjs-example" data-for="nestjs-example">NestJS Example</a></li><li class="depth-0"><a href="#prisma-example" data-for="prisma-example">Prisma Example</a></li><li class="depth-0"><a href="#checklist" data-for="checklist">Checklist</a></li><li class="overflow-end"></li></ul></div></div><div class="graph"><h3>Sơ đồ</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[&quot;moc&quot;],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
                 s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
                 c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
                 C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
