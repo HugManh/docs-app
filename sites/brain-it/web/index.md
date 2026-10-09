@@ -1,5 +1,5 @@
 ---
-title: Brain-IT
+title: Trang chủ
 description: Ghi chép cá nhân của Hug Manh về AI, kiến trúc phần mềm, API, lập trình và hệ thống.
 ---
 
