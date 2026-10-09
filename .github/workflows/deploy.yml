@@ -43,6 +43,10 @@ jobs:
   deploy:
     needs: plan
     runs-on: ubuntu-latest
+    # SECRET_KEY, SLACK_* là secret của environment này
+    environment:
+      name: github-pages
+      url: https://hugmanh.github.io/docs-app/${{ matrix.site }}/
     strategy:
       fail-fast: false # site này lỗi không chặn site khác
       matrix:
