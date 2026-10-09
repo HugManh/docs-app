@@ -1,7 +1,7 @@
-# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
-# Dựa trên template "obsidian" của Quartz v5.
-# Nội dung được dựng từ vault HugManh/brain-IT bằng scripts/sync-vault.sh:
-#   30-Resources -> notes/   40-MOCs -> / (gốc)   _Attachments -> assets/   web/ -> (trang riêng cho web)
+# yaml-language-server: $schema=../../quartz/plugins/quartz-plugins.schema.json
+# Cấu hình Quartz cho site brain-it (dựa trên template "obsidian" của Quartz v5).
+# scripts/build-site.sh copy file này ra gốc repo trước khi build.
+# Nội dung lấy từ vault theo sites/brain-it/sync.map.
 configuration:
   pageTitle: Brain-IT
   pageTitleSuffix: " · Brain-IT"
@@ -9,7 +9,7 @@ configuration:
   enablePopovers: true
   analytics: null
   locale: vi-VN
-  baseUrl: hugmanh.github.io/docs-app
+  baseUrl: hugmanh.github.io/docs-app/brain-it
   ignorePatterns:
     - private
     - templates

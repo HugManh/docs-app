@@ -1,0 +1,6 @@
+# Thư mục nào của vault được đưa lên web, và nằm ở đâu trên site.
+# Chỉ những thư mục liệt kê ở đây mới được public.
+# <thư-mục-trong-vault>   <đích-trong-content>
+30-Resources              notes
+40-MOCs                   .
+_Attachments              assets

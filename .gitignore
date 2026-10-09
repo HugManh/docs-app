@@ -13,6 +13,12 @@ replit.nix
 quartz/cli/tui/dist/
 .turbo/
 
+# Sinh ra bởi scripts/build-site.sh (copy từ sites/<site>/quartz.config.yaml)
+/quartz.config.yaml
+# Output và vault checkout trên CI
+/out/
+/.vault/
+
 # KHÔNG thêm content/ vào đây: Quartz bỏ qua mọi file bị .gitignore nên site sẽ rỗng.
 # content/ được dựng từ vault bằng scripts/sync-vault.sh; script tự thêm nó vào
 # .git/info/exclude (git bỏ qua, Quartz vẫn đọc) để tránh commit/push nhầm.

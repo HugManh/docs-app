@@ -1,19 +1,21 @@
 #!/usr/bin/env bash
-# Dựng thư mục content/ của Quartz từ vault Obsidian (HugManh/brain-IT).
+# Dựng thư mục content/ của Quartz cho một site từ vault Obsidian của nó.
 #
-# Vault tổ chức theo workflow (PARA + Johnny Decimal), web tổ chức theo người đọc,
-# nên ở đây chỉ chọn phần public và đặt lại tên thư mục cho URL gọn:
-#   30-Resources -> notes/    (ghi chú nguyên tử)
-#   40-MOCs      -> /         (bản đồ chủ đề, nằm ở gốc để làm điều hướng chính)
-#   _Attachments -> assets/   (ảnh nhúng)
-#   web/         -> /         (trang chỉ có trên web: trang chủ, trang thư mục)
+# Vault tổ chức theo workflow của người viết, web tổ chức theo người đọc, nên chỉ
+# những thư mục khai báo trong sites/<site>/sync.map mới được đưa lên (và đổi tên
+# cho URL gọn). sites/<site>/web/ chứa các trang chỉ có trên web (trang chủ...).
 #
-# Dùng: scripts/sync-vault.sh <đường-dẫn-vault> [thư-mục-đích=content]
+# Dùng: scripts/sync-vault.sh <site> <đường-dẫn-vault> [thư-mục-đích=content]
 set -euo pipefail
 
-VAULT="${1:?Cần đường dẫn tới vault, ví dụ: scripts/sync-vault.sh ../brain-IT}"
-DEST="${2:-content}"
+SITE="${1:?Cần tên site, ví dụ: scripts/sync-vault.sh brain-it ../brain-IT}"
+VAULT="${2:?Cần đường dẫn tới vault}"
+DEST="${3:-content}"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+SITE_DIR="$ROOT/sites/$SITE"
+MAP="$SITE_DIR/sync.map"
+
+[ -f "$MAP" ] || { echo "Không tìm thấy $MAP" >&2; exit 1; }
 
 mkdir -p "$DEST"
 rm -rf "${DEST:?}"/*
@@ -33,23 +35,35 @@ if EXCLUDE="$(git -C "$ROOT" rev-parse --git-path info/exclude 2>/dev/null)"; th
   esac
 fi
 
-cp -r "$VAULT/30-Resources" "$DEST/notes"
-cp -r "$VAULT/40-MOCs/." "$DEST/"
-cp -r "$VAULT/_Attachments" "$DEST/assets"
-cp -r "$ROOT/web/." "$DEST/"
+# Đọc sync.map: mỗi dòng "<thư-mục-vault> <đích>", bỏ dòng trống và comment
+SRCS=()
+DSTS=()
+while read -r src dst _; do
+  case "$src" in "" | \#*) continue ;; esac
+  SRCS+=("$src")
+  DSTS+=("$dst")
+  mkdir -p "$DEST/$dst"
+  cp -r "$VAULT/$src/." "$DEST/$dst/"
+done <"$MAP"
+
+[ -d "$SITE_DIR/web" ] && cp -r "$SITE_DIR/web/." "$DEST/"
 
 # Ghi chú không có `updated` trong frontmatter sẽ lấy ngày sửa từ filesystem.
 # Bản copy (nhất là trên CI) mất mtime gốc, nên đặt lại theo commit cuối trong vault.
 if git -C "$VAULT" rev-parse --git-dir >/dev/null 2>&1; then
-  git -C "$VAULT" -c core.quotepath=false log --format='@%ct' --name-only -- 30-Resources 40-MOCs |
+  git -C "$VAULT" -c core.quotepath=false log --format='@%ct' --name-only -- "${SRCS[@]}" |
     awk '/^@/ { ts = $0; next } NF && !seen[$0]++ { print ts "\t" $0 }' |
     while IFS=$'\t' read -r ts path; do
-      case "$path" in
-        30-Resources/*) target="$DEST/notes/${path#30-Resources/}" ;;
-        40-MOCs/*) target="$DEST/${path#40-MOCs/}" ;;
-      esac
-      [ -f "$target" ] && touch -d "$ts" "$target"
+      for i in "${!SRCS[@]}"; do
+        case "$path" in
+          "${SRCS[$i]}"/*)
+            target="$DEST/${DSTS[$i]}/${path#"${SRCS[$i]}"/}"
+            [ -f "$target" ] && touch -d "$ts" "$target"
+            break
+            ;;
+        esac
+      done
     done
 fi
 
-echo "Đã dựng $DEST từ $VAULT: $(find "$DEST" -name '*.md' | wc -l) trang markdown"
+echo "[$SITE] Đã dựng $DEST từ $VAULT: $(find "$DEST" -name '*.md' | wc -l) trang markdown"

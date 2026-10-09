@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HugManh · Docs</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --fg: #1f1f1d;
+        --muted: #6b6b66;
+        --bg: #fcfcfa;
+        --card: #ffffff;
+        --border: #e6e6e3;
+        --accent: #2f5d8a;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --fg: #f0f0f2;
+          --muted: #a0a0a8;
+          --bg: #161618;
+          --card: #1f1f23;
+          --border: #2f2f33;
+          --accent: #8ab4dc;
+        }
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+      }
+      p {
+        color: var(--muted);
+      }
+      a.site {
+        display: block;
+        margin-top: 1rem;
+        padding: 1.25rem 1.5rem;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--card);
+        color: inherit;
+        text-decoration: none;
+      }
+      a.site:hover {
+        border-color: var(--accent);
+      }
+      a.site strong {
+        color: var(--accent);
+        font-size: 1.15rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>HugManh · Docs</h1>
+      <p>Các bộ ghi chú được xuất bản từ Obsidian.</p>
+      <!-- Thêm site mới: thêm một thẻ <a class="site"> trỏ tới thư mục của site -->
+      <a class="site" href="./brain-it/">
+        <strong>Brain-IT</strong>
+        <p>AI, kiến trúc phần mềm, API, lập trình và hệ thống.</p>
+      </a>
+    </main>
+  </body>
+</html>
