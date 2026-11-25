@@ -15,6 +15,7 @@ configuration:
     - _inbox
     - _templates
     - _assets
+    - _noi-bo
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
