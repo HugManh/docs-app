@@ -6,65 +6,65 @@
       <description>Last 10 notes on CertNet Docs</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>project</title>
-    <link>https://hugmanh.github.io/docs-app/certnet/tags/project</link>
-    <guid>https://hugmanh.github.io/docs-app/certnet/tags/project</guid>
+    <title>architecture</title>
+    <link>https://hugmanh.github.io/docs-app/certnet/tags/architecture</link>
+    <guid>https://hugmanh.github.io/docs-app/certnet/tags/architecture</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 25 Nov 2026 06:35:55 GMT</pubDate>
+    <pubDate>Wed, 25 Nov 2026 06:51:12 GMT</pubDate>
   </item><item>
-    <title>certnet</title>
-    <link>https://hugmanh.github.io/docs-app/certnet/tags/certnet</link>
-    <guid>https://hugmanh.github.io/docs-app/certnet/tags/certnet</guid>
+    <title>privacy</title>
+    <link>https://hugmanh.github.io/docs-app/certnet/tags/privacy</link>
+    <guid>https://hugmanh.github.io/docs-app/certnet/tags/privacy</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 25 Nov 2026 06:35:55 GMT</pubDate>
+    <pubDate>Wed, 25 Nov 2026 06:51:12 GMT</pubDate>
   </item><item>
-    <title>api</title>
-    <link>https://hugmanh.github.io/docs-app/certnet/tags/api</link>
-    <guid>https://hugmanh.github.io/docs-app/certnet/tags/api</guid>
+    <title>data</title>
+    <link>https://hugmanh.github.io/docs-app/certnet/tags/data</link>
+    <guid>https://hugmanh.github.io/docs-app/certnet/tags/data</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 25 Nov 2026 06:35:55 GMT</pubDate>
+    <pubDate>Wed, 25 Nov 2026 06:51:12 GMT</pubDate>
   </item><item>
-    <title>contract</title>
-    <link>https://hugmanh.github.io/docs-app/certnet/tags/contract</link>
-    <guid>https://hugmanh.github.io/docs-app/certnet/tags/contract</guid>
+    <title>modules</title>
+    <link>https://hugmanh.github.io/docs-app/certnet/tags/modules</link>
+    <guid>https://hugmanh.github.io/docs-app/certnet/tags/modules</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 25 Nov 2026 06:35:55 GMT</pubDate>
+    <pubDate>Wed, 25 Nov 2026 06:51:12 GMT</pubDate>
   </item><item>
-    <title>did</title>
-    <link>https://hugmanh.github.io/docs-app/certnet/tags/did</link>
-    <guid>https://hugmanh.github.io/docs-app/certnet/tags/did</guid>
+    <title>cosmos</title>
+    <link>https://hugmanh.github.io/docs-app/certnet/tags/cosmos</link>
+    <guid>https://hugmanh.github.io/docs-app/certnet/tags/cosmos</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 25 Nov 2026 06:35:55 GMT</pubDate>
+    <pubDate>Wed, 25 Nov 2026 06:51:12 GMT</pubDate>
   </item><item>
-    <title>ssi</title>
-    <link>https://hugmanh.github.io/docs-app/certnet/tags/ssi</link>
-    <guid>https://hugmanh.github.io/docs-app/certnet/tags/ssi</guid>
+    <title>cometbft</title>
+    <link>https://hugmanh.github.io/docs-app/certnet/tags/cometbft</link>
+    <guid>https://hugmanh.github.io/docs-app/certnet/tags/cometbft</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 25 Nov 2026 06:35:55 GMT</pubDate>
-  </item><item>
-    <title>fees</title>
-    <link>https://hugmanh.github.io/docs-app/certnet/tags/fees</link>
-    <guid>https://hugmanh.github.io/docs-app/certnet/tags/fees</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 25 Nov 2026 06:35:55 GMT</pubDate>
-  </item><item>
-    <title>latency</title>
-    <link>https://hugmanh.github.io/docs-app/certnet/tags/latency</link>
-    <guid>https://hugmanh.github.io/docs-app/certnet/tags/latency</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 25 Nov 2026 06:35:55 GMT</pubDate>
-  </item><item>
-    <title>gateway</title>
-    <link>https://hugmanh.github.io/docs-app/certnet/tags/gateway</link>
-    <guid>https://hugmanh.github.io/docs-app/certnet/tags/gateway</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 25 Nov 2026 06:35:55 GMT</pubDate>
+    <pubDate>Wed, 25 Nov 2026 06:51:12 GMT</pubDate>
   </item><item>
     <title>moc</title>
     <link>https://hugmanh.github.io/docs-app/certnet/tags/moc</link>
     <guid>https://hugmanh.github.io/docs-app/certnet/tags/moc</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 25 Nov 2026 06:35:55 GMT</pubDate>
+    <pubDate>Wed, 25 Nov 2026 06:51:12 GMT</pubDate>
+  </item><item>
+    <title>project</title>
+    <link>https://hugmanh.github.io/docs-app/certnet/tags/project</link>
+    <guid>https://hugmanh.github.io/docs-app/certnet/tags/project</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 25 Nov 2026 06:51:12 GMT</pubDate>
+  </item><item>
+    <title>certnet</title>
+    <link>https://hugmanh.github.io/docs-app/certnet/tags/certnet</link>
+    <guid>https://hugmanh.github.io/docs-app/certnet/tags/certnet</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 25 Nov 2026 06:51:12 GMT</pubDate>
+  </item><item>
+    <title>api</title>
+    <link>https://hugmanh.github.io/docs-app/certnet/tags/api</link>
+    <guid>https://hugmanh.github.io/docs-app/certnet/tags/api</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 25 Nov 2026 06:51:12 GMT</pubDate>
   </item>
     </channel>
   </rss>
