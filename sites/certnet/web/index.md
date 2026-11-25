@@ -1,6 +1,6 @@
 ---
-title: Home
-description: Trang chủ tài liệu CertNet – điểm vào overview, specs, API, developers
+title: Trang chủ
+description: Trang chủ tài liệu CertNet — Tổng quan, Quản trị, Kiến trúc, Đặc tả, Tích hợp, Vận hành
 tags:
   - moc
   - certnet
@@ -8,23 +8,22 @@ tags:
 
 # CertNet Docs
 
-> **CertNet** là Layer-1 permissioned (PoA) mã nguồn mở – shared trust layer cho danh tính và chứng chỉ số (`did:certnet`, Credential Status, Trust Registry).  
+> **CertNet** là Layer-1 permissioned (PoA) mã nguồn mở — shared trust layer cho danh tính và chứng chỉ số (did:certnet, Credential Status, Trust Registry).  
 > Mega app là **client**. CertNet **không thuộc** mega app.
 
 ## Đọc nhanh
 
 | Bạn cần… | Đi tới |
 |---|---|
-| Hiểu CertNet là gì / không phải gì | [Overview](overview/) |
-| Quản trị & hai giai đoạn vận hành | [Governance](governance/) |
-| Stack Cosmos / modules / PII | [Architecture](architecture/) |
-| Spec bắt buộc (roadmap 25/11) | [Specs](specs/) |
-| **API Contract + OpenAPI (ghép)** | [API Contract](api/API-Contract) · [openapi.yaml](api/openapi.yaml) |
-| **Tự implement surface** | [Implement API Contract](developers/Implement-API-Contract) |
-| Gateway, phí | [API](api/) |
-| SDK, localnet, checklist bàn giao | [Developers](developers/) |
-| Testnet / versioning / mainnet | [Operations](operations/) |
-| Thuật ngữ | [Glossary](get-started/Glossary) |
+| Hiểu CertNet là gì / không phải gì | [Tổng quan](overview/) |
+| Quản trị & hai giai đoạn vận hành | [Quản trị](governance/) |
+| Stack Cosmos / modules / PII | [Kiến trúc](architecture/) |
+| Spec bắt buộc (roadmap 25/11) | [Đặc tả](specs/) |
+| **API Contract & OpenAPI (ghép)** | [API Contract](developers/API-Contract) · [openapi.yaml](developers/openapi.yaml) |
+| Gateway, phí & tự code | [Gateway](developers/Gateway) · [Tự implement](developers/Implement-API-Contract) |
+| SDK, localnet, checklist bàn giao | [Tích hợp](developers/) |
+| Testnet / versioning / mainnet | [Vận hành](operations/) |
+| Thuật ngữ | [Thuật ngữ](get-started/Glossary) |
 
 ## Câu chốt nội bộ
 
@@ -41,14 +40,13 @@ Nếu chỉ một app dùng và một bên kiểm soát hết → chain đắt v
 
 ## Bản đồ thư mục
 
-```text
+`	ext
 certnet-docs/
-├── get-started/          Getting started
-├── overview/       What & why
-├── governance/     Org & phases
-├── architecture/   Stack & modules
-├── specs/          DID · Status · Trust
-├── api/            Gateway & fees
-├── developers/     SDK · localnet
-└── operations/     Testnet · mainnet
-```
+├── get-started/          Bắt đầu & Thuật ngữ
+├── overview/             Tổng quan
+├── governance/           Quản trị
+├── architecture/         Kiến trúc
+├── specs/                Đặc tả
+├── developers/           Tích hợp (API, Gateway, SDK, Localnet)
+└── operations/           Vận hành
+`
