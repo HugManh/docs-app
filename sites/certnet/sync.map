@@ -1,11 +1,11 @@
 # Thư mục nào của vault được đưa lên web, và nằm ở đâu trên site.
 # Chỉ những thư mục liệt kê ở đây mới được public.
 # <thư-mục-trong-vault>   <đích-trong-content>
-get-started     get-started
-overview        overview
-governance      governance
-architecture    architecture
-specs           specs
-developers      developers
-operations      operations
-appendices      appendices
+01-get-started     01-get-started
+02-overview        02-overview
+03-governance      03-governance
+04-architecture    04-architecture
+05-specs           05-specs
+06-developers      06-developers
+07-operations      07-operations
+99-appendices      99-appendices

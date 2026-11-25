@@ -11,11 +11,12 @@ configuration:
   locale: vi-VN
   baseUrl: hugmanh.github.io/docs-app/certnet
   ignorePatterns:
+    - private
+    - templates
     - .obsidian
     - _inbox
     - _templates
     - _assets
-    - _noi-bo
   theme:
     fontOrigin: googleFonts
     cdnCaching: true

@@ -15,15 +15,15 @@ tags:
 
 | Bạn cần… | Đi tới |
 |---|---|
-| Hiểu CertNet là gì / không phải gì | [Tổng quan](overview/) |
-| Quản trị & hai giai đoạn vận hành | [Quản trị](governance/) |
-| Stack Cosmos / modules / PII | [Kiến trúc](architecture/) |
-| Spec bắt buộc (roadmap 25/11) | [Đặc tả](specs/) |
-| **API Contract & OpenAPI (ghép)** | [API Contract](developers/api/API-Contract) · [openapi.yaml](developers/api/openapi.yaml) |
-| Gateway, phí & tự code | [Gateway](developers/api/Gateway) · [Tự implement](developers/guides/Implement-API-Contract) |
-| SDK, localnet, checklist bàn giao | [Tích hợp](developers/) |
-| Testnet / versioning / mainnet | [Vận hành](operations/) |
-| Tra cứu thuật ngữ, mã lỗi, FAQ | [Phụ lục](appendices/) |
+| Hiểu CertNet là gì / không phải gì | [02. Tổng quan](02-overview/) |
+| Quản trị & hai giai đoạn vận hành | [03. Quản trị](03-governance/) |
+| Stack Cosmos / modules / PII | [04. Kiến trúc](04-architecture/) |
+| Spec bắt buộc (roadmap 25/11) | [05. Đặc tả](05-specs/) |
+| **API Contract & OpenAPI (ghép)** | [API Contract](06-developers/01-api/API-Contract) · [openapi.yaml](06-developers/01-api/openapi.yaml) |
+| Gateway, phí & tự code | [Gateway](06-developers/01-api/Gateway) · [Tự implement](06-developers/02-guides/Implement-API-Contract) |
+| SDK, localnet, checklist bàn giao | [06. Tích hợp](06-developers/) |
+| Testnet / versioning / mainnet | [07. Vận hành](07-operations/) |
+| Tra cứu thuật ngữ, mã lỗi, FAQ | [99. Phụ lục](99-appendices/) |
 
 ## Câu chốt nội bộ
 
@@ -42,15 +42,15 @@ Nếu chỉ một app dùng và một bên kiểm soát hết → chain đắt v
 
 ```text
 certnet-docs/
-├── get-started/          Bắt đầu
-├── overview/             Tổng quan
-├── governance/           Quản trị
-├── architecture/         Kiến trúc
-├── specs/                Đặc tả
-├── developers/           Tích hợp & Phát triển
-│   ├── api/              API & Cổng kết nối
-│   ├── guides/           Hướng dẫn triển khai
-│   └── testing/          Kiểm thử & Bàn giao
-├── operations/           Vận hành
-└── appendices/           Phụ lục (Glossary, Mã lỗi, FAQ)
+├── 01-get-started/       01. Bắt đầu
+├── 02-overview/          02. Tổng quan
+├── 03-governance/        03. Quản trị
+├── 04-architecture/      04. Kiến trúc
+├── 05-specs/             05. Đặc tả
+├── 06-developers/        06. Tích hợp & Phát triển
+│   ├── 01-api/           API & Cổng kết nối
+│   ├── 02-guides/        Hướng dẫn triển khai
+│   └── 03-testing/       Kiểm thử & Bàn giao
+├── 07-operations/        07. Vận hành
+└── 99-appendices/        99. Phụ lục (Glossary, Mã lỗi, FAQ)
 ```
