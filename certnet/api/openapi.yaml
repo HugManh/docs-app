@@ -1,0 +1,1066 @@
+openapi: 3.0.3
+info:
+  title: CertNet Integration API
+  description: |
+    Contract-first OpenAPI cho ghép DidResolver / StatusChecker / TrustRegistry.
+    Canonical docs: docs/certnet-docs/05-api/API-Contract.md + openapi.yaml.
+    How-to: docs/certnet-docs/06-developers/Implement-API-Contract.md.
+    Code copy for consumers / openapi-generator.
+
+    Implementation status (gateway :8000, localnet 25/11):
+    - READY reads: GET DID, GET/POST status check, GET trust lookup
+    - READY writes: POST /dids, PUT status entries, trust POST/PUT/DELETE/reject
+    - READY demo staging: trust pending-requests (submit/list/confirm/reject) — file queue; on-chain only after confirm
+    - 501: DID VM CRUD, DID deactivate, GET DID ?versionTime=
+  version: 0.1.0-draft
+  contact:
+    name: hugmanh / CertNet
+
+servers:
+  - url: http://localhost:8000/v1
+    description: local gateway (certnet-gateway repo · extractable) — READY paths
+  - url: http://localhost:1317/v1
+    description: local LCD/REST node (Cosmos) — không thay gateway Integration API
+  - url: https://api.testnet.certnet.example/v1
+    description: testnet (TBD — chưa công bố)
+  - url: https://api.certnet.example/v1
+    description: mainnet (TBD)
+
+tags:
+  - name: DidResolver
+  - name: StatusChecker
+  - name: TrustRegistry
+  - name: WriteDID
+  - name: WriteStatus
+  - name: WriteTrust
+
+paths:
+  /dids/{did}:
+    get:
+      tags: [DidResolver]
+      operationId: resolveDid
+      summary: "[READY] Resolve did:certnet → DID Document"
+      description: |
+        READY trên gateway. Query `versionTime` → 501 VERSION_TIME_UNSUPPORTED.
+      parameters:
+        - $ref: '#/components/parameters/DidPath'
+        - name: versionTime
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date-time
+          description: "501 VERSION_TIME_UNSUPPORTED — chưa hỗ trợ resolve tại thời điểm T."
+      responses:
+        '200':
+          description: DID resolved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DidResolutionResult'
+        '404':
+          $ref: '#/components/responses/Error'
+        '422':
+          $ref: '#/components/responses/Error'
+        '501':
+          $ref: '#/components/responses/Error'
+        '503':
+          $ref: '#/components/responses/Error'
+
+  /dids:
+    post:
+      tags: [WriteDID]
+      operationId: createDid
+      summary: "[READY] Tạo DID + verification method đầu (MsgCreateDid)"
+      description: |
+        READY. Gateway sinh `did:certnet:{network}:{hex}` và broadcast MsgCreateDid
+        (local demo ký qua certnetd keyring). Hiện chỉ dùng verificationMethods[0].
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateDidRequest'
+      responses:
+        '201':
+          description: DID created (hoặc 202 nếu async — TBD)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DidResolutionResult'
+        '202':
+          $ref: '#/components/responses/TxAccepted'
+        '401':
+          $ref: '#/components/responses/Error'
+        '403':
+          $ref: '#/components/responses/Error'
+        '422':
+          $ref: '#/components/responses/Error'
+
+  /dids/{did}/verification-methods:
+    post:
+      tags: [WriteDID]
+      operationId: addVerificationMethod
+      summary: "[501] Thêm key vào DID"
+      description: Gateway trả 501 — chưa có Msg on-chain (ngoài scope 25/11).
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - $ref: '#/components/parameters/DidPath'
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddVerificationMethodRequest'
+      responses:
+        '501':
+          $ref: '#/components/responses/Error'
+        '200':
+          description: Updated DID Document (khi implement)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DidResolutionResult'
+
+  /dids/{did}/verification-methods/{vmId}:
+    put:
+      tags: [WriteDID]
+      operationId: updateVerificationMethod
+      summary: "[501] Cập nhật / xoay key"
+      description: Gateway route PUT → 501. (OpenAPI cũ dùng PATCH; code dùng PUT.)
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - $ref: '#/components/parameters/DidPath'
+        - $ref: '#/components/parameters/VmIdPath'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateVerificationMethodRequest'
+      responses:
+        '501':
+          $ref: '#/components/responses/Error'
+    delete:
+      tags: [WriteDID]
+      operationId: revokeVerificationMethod
+      summary: "[501] Thu hồi key"
+      description: Gateway trả 501 — chưa có Msg on-chain.
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - $ref: '#/components/parameters/DidPath'
+        - $ref: '#/components/parameters/VmIdPath'
+      responses:
+        '501':
+          $ref: '#/components/responses/Error'
+        '204':
+          description: Revoked (khi implement)
+
+  /dids/{did}/deactivate:
+    post:
+      tags: [WriteDID]
+      operationId: deactivateDid
+      summary: "[501] Deactivate DID"
+      description: Gateway trả 501 — chưa có Msg deactivate.
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - $ref: '#/components/parameters/DidPath'
+        - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '501':
+          $ref: '#/components/responses/Error'
+        '200':
+          description: Deactivated (khi implement)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DidResolutionResult'
+
+  /credential-statuses/{statusListId}:
+    get:
+      tags: [StatusChecker]
+      operationId: getCredentialStatus
+      summary: "[READY] Check status tại index trong status list"
+      parameters:
+        - name: statusListId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: index
+          in: query
+          required: true
+          schema:
+            type: integer
+            minimum: 0
+      responses:
+        '200':
+          description: Status result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CredentialStatusResult'
+        '404':
+          $ref: '#/components/responses/Error'
+        '422':
+          $ref: '#/components/responses/Error'
+        '503':
+          $ref: '#/components/responses/Error'
+
+  /credential-statuses/check:
+    post:
+      tags: [StatusChecker]
+      operationId: checkCredentialStatus
+      summary: "[READY] Check status (body) — single hoặc batch ≤100"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/CredentialStatusRef'
+                - type: object
+                  required: [items]
+                  properties:
+                    items:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/CredentialStatusRef'
+                      maxItems: 100
+      responses:
+        '200':
+          description: Status result hoặc danh sách kết quả
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/CredentialStatusResult'
+                  - type: object
+                    required: [data]
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/CredentialStatusResult'
+        '404':
+          $ref: '#/components/responses/Error'
+        '422':
+          $ref: '#/components/responses/Error'
+
+  /credential-statuses/{statusListId}/entries:
+    put:
+      tags: [WriteStatus]
+      operationId: updateCredentialStatusEntry
+      summary: "[READY] Cập nhật status entry (MsgUpdateStatusEntry)"
+      description: READY — PUT (không phải POST). Broadcast MsgUpdateStatusEntry.
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - name: statusListId
+          in: path
+          required: true
+          schema:
+            type: string
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateStatusEntryRequest'
+      responses:
+        '200':
+          description: Updated entry
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CredentialStatusResult'
+        '202':
+          $ref: '#/components/responses/TxAccepted'
+        '401':
+          $ref: '#/components/responses/Error'
+        '403':
+          $ref: '#/components/responses/Error'
+        '404':
+          $ref: '#/components/responses/Error'
+        '409':
+          $ref: '#/components/responses/Error'
+        '422':
+          $ref: '#/components/responses/Error'
+
+  /trust-registry/issuers/{issuerDid}:
+    get:
+      tags: [TrustRegistry]
+      operationId: lookupIssuer
+      summary: "[READY] Tra Trust Registry theo issuer DID"
+      parameters:
+        - name: issuerDid
+          in: path
+          required: true
+          schema:
+            type: string
+          description: URL-encoded DID
+        - name: vcType
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: atTime
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: Issuer record (recognized hoặc rejected)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrustLookupResult'
+        '404':
+          $ref: '#/components/responses/Error'
+        '503':
+          $ref: '#/components/responses/Error'
+    put:
+      tags: [WriteTrust]
+      operationId: updateIssuerTrust
+      summary: "[READY] Cập nhật scope / VC type (MsgUpdateIssuer)"
+      description: READY — PUT (không phải PATCH).
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - name: issuerDid
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateTrustIssuerRequest'
+      responses:
+        '200':
+          description: Updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrustLookupResult'
+        '202':
+          $ref: '#/components/responses/TxAccepted'
+        '401':
+          $ref: '#/components/responses/Error'
+        '403':
+          $ref: '#/components/responses/Error'
+        '404':
+          $ref: '#/components/responses/Error'
+    delete:
+      tags: [WriteTrust]
+      operationId: deleteIssuerTrust
+      summary: "[READY] Hard-delete issuer record (MsgDeleteIssuer)"
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - name: issuerDid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Deleted
+        '202':
+          $ref: '#/components/responses/TxAccepted'
+        '401':
+          $ref: '#/components/responses/Error'
+        '403':
+          $ref: '#/components/responses/Error'
+        '404':
+          $ref: '#/components/responses/Error'
+
+  /trust-registry/issuers:
+    post:
+      tags: [WriteTrust]
+      operationId: addIssuerTrust
+      summary: "[READY] Thêm / công nhận issuer (MsgRegisterIssuer)"
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddTrustIssuerRequest'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrustLookupResult'
+        '202':
+          $ref: '#/components/responses/TxAccepted'
+        '401':
+          $ref: '#/components/responses/Error'
+        '403':
+          $ref: '#/components/responses/Error'
+        '409':
+          $ref: '#/components/responses/Error'
+        '422':
+          $ref: '#/components/responses/Error'
+
+  /trust-registry/issuers/{issuerDid}/reject:
+    post:
+      tags: [WriteTrust]
+      operationId: rejectIssuerTrust
+      summary: "[READY] Từ chối / rút công nhận issuer (MsgRejectIssuer)"
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - name: issuerDid
+          in: path
+          required: true
+          schema:
+            type: string
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reason:
+                  type: string
+      responses:
+        '200':
+          description: Rejected
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrustLookupResult'
+        '202':
+          $ref: '#/components/responses/TxAccepted'
+        '401':
+          $ref: '#/components/responses/Error'
+        '403':
+          $ref: '#/components/responses/Error'
+        '404':
+          $ref: '#/components/responses/Error'
+
+  /trust-registry/pending-requests:
+    get:
+      tags: [WriteTrust]
+      operationId: listPendingTrustRequests
+      summary: "[READY][demo staging] Liệt kê yêu cầu công nhận chờ xử lý"
+      description: |
+        Hàng đợi file trên gateway — **không** phải state on-chain.
+        Chain x/trust không có pending; chỉ sau confirm mới gọi MsgRegisterIssuer.
+      parameters:
+        - name: status
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [pending, confirmed, rejected]
+      responses:
+        '200':
+          description: Danh sách yêu cầu staging
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PendingTrustListResult'
+    post:
+      tags: [WriteTrust]
+      operationId: submitPendingTrustRequest
+      summary: "[READY][demo staging] Issuer gửi yêu cầu công nhận (chưa on-chain)"
+      description: |
+        Ghi vào hàng đợi chờ công nhận (demo staging). **Không** broadcast RegisterIssuer.
+        Cơ quan công nhận (accreditingBody) xác nhận ở /confirm mới ghi sổ tin cậy.
+      security:
+        - CertNetWriteAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddTrustIssuerRequest'
+      responses:
+        '202':
+          description: Đã nhận vào hàng đợi staging (chưa on-chain)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PendingTrustRequest'
+        '422':
+          $ref: '#/components/responses/Error'
+
+  /trust-registry/pending-requests/{requestId}/confirm:
+    post:
+      tags: [WriteTrust]
+      operationId: confirmPendingTrustRequest
+      summary: "[READY][demo staging] Accreditor xác nhận → MsgRegisterIssuer"
+      description: |
+        Chỉ endpoint này (trong luồng demo 2 vai) mới gọi RegisterIssuer on-chain.
+        Vai trò xác nhận = cơ quan công nhận (accreditingBody).
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - name: requestId
+          in: path
+          required: true
+          schema:
+            type: string
+        - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '201':
+          description: Đã công nhận on-chain
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PendingTrustConfirmResult'
+        '202':
+          $ref: '#/components/responses/TxAccepted'
+        '404':
+          $ref: '#/components/responses/Error'
+        '409':
+          $ref: '#/components/responses/Error'
+        '503':
+          $ref: '#/components/responses/Error'
+
+  /trust-registry/pending-requests/{requestId}/reject:
+    post:
+      tags: [WriteTrust]
+      operationId: rejectPendingTrustRequest
+      summary: "[READY][demo staging] Accreditor từ chối yêu cầu"
+      description: |
+        Đánh dấu rejected trên hàng đợi staging. Nếu issuer đã có trên chuỗi thì gọi MsgRejectIssuer;
+        nếu chưa từng confirm thì chỉ cập nhật local (không TX giả).
+      security:
+        - CertNetWriteAuth: []
+      parameters:
+        - name: requestId
+          in: path
+          required: true
+          schema:
+            type: string
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reason:
+                  type: string
+      responses:
+        '200':
+          description: Đã từ chối (staging ± on-chain nếu đã có record)
+        '202':
+          $ref: '#/components/responses/TxAccepted'
+        '404':
+          $ref: '#/components/responses/Error'
+        '409':
+          $ref: '#/components/responses/Error'
+
+components:
+  securitySchemes:
+    CertNetWriteAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: TBD
+      description: |
+        Placeholder. Production có thể là signed chain tx thay vì Bearer JWT.
+        Chi tiết TBD trong CertNet API Contract §4.
+
+  parameters:
+    DidPath:
+      name: did
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Full DID, URL-encoded (did%3Acertnet%3A...)
+    VmIdPath:
+      name: vmId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: Verification method id hoặc fragment (TBD encoding)
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: false
+      schema:
+        type: string
+        format: uuid
+    CorrelationId:
+      name: X-Correlation-Id
+      in: header
+      required: false
+      schema:
+        type: string
+
+  responses:
+    Error:
+      description: Error response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorBody'
+    TxAccepted:
+      description: Write accepted, chờ commit (async)
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TxAccepted'
+
+  schemas:
+    ErrorBody:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: string
+          enum:
+            - DID_NOT_FOUND
+            - DID_INVALID
+            - DID_DEACTIVATED
+            - VERSION_TIME_UNSUPPORTED
+            - VERSION_NOT_FOUND
+            - STATUS_LIST_NOT_FOUND
+            - STATUS_INDEX_OUT_OF_RANGE
+            - CREDENTIAL_STATUS_UNKNOWN
+            - ISSUER_NOT_FOUND
+            - ISSUER_REJECTED
+            - UNAUTHORIZED
+            - FORBIDDEN
+            - INVALID_SIGNATURE
+            - RATE_LIMITED
+            - CHAIN_UNAVAILABLE
+            - INTERNAL_ERROR
+        message:
+          type: string
+        details:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        correlationId:
+          type: string
+
+    ChainSelfCheck:
+      type: object
+      properties:
+        blockHeight:
+          type: integer
+          format: int64
+          nullable: true
+        txHash:
+          type: string
+          nullable: true
+        proof:
+          description: Light-client / Merkle proof schema TBD
+          nullable: true
+          additionalProperties: true
+
+    PublicKeyJwk:
+      type: object
+      required: [kty]
+      properties:
+        kty:
+          type: string
+          enum: [OKP, EC]
+        crv:
+          type: string
+          enum: [Ed25519, P-256]
+        x:
+          type: string
+        y:
+          type: string
+          description: Required for P-256
+
+    VerificationMethod:
+      type: object
+      required: [id, type, controller, publicKeyJwk]
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+          example: JsonWebKey2020
+        controller:
+          type: string
+        publicKeyJwk:
+          $ref: '#/components/schemas/PublicKeyJwk'
+
+    DidDocument:
+      type: object
+      required: [id, verificationMethod]
+      properties:
+        '@context':
+          type: array
+          items:
+            type: string
+        id:
+          type: string
+        verificationMethod:
+          type: array
+          items:
+            $ref: '#/components/schemas/VerificationMethod'
+        authentication:
+          type: array
+          items:
+            type: string
+        assertionMethod:
+          type: array
+          items:
+            type: string
+        capabilityInvocation:
+          type: array
+          items:
+            type: string
+
+    DidMetadata:
+      type: object
+      properties:
+        created:
+          type: string
+          format: date-time
+        updated:
+          type: string
+          format: date-time
+        deactivated:
+          type: boolean
+        versionId:
+          type: string
+
+    DidResolutionResult:
+      type: object
+      required: [did, document]
+      properties:
+        did:
+          type: string
+        document:
+          $ref: '#/components/schemas/DidDocument'
+        metadata:
+          $ref: '#/components/schemas/DidMetadata'
+        chain:
+          $ref: '#/components/schemas/ChainSelfCheck'
+
+    CredentialStatusRef:
+      type: object
+      required: [statusListId, index]
+      properties:
+        statusListId:
+          type: string
+        index:
+          type: integer
+          minimum: 0
+
+    CredentialStatusResult:
+      type: object
+      required: [statusListId, index, status]
+      properties:
+        statusListId:
+          type: string
+        index:
+          type: integer
+        status:
+          type: string
+          enum: [valid, suspended, revoked]
+        checkedAt:
+          type: string
+          format: date-time
+        chain:
+          $ref: '#/components/schemas/ChainSelfCheck'
+
+    TrustSignature:
+      type: object
+      properties:
+        alg:
+          type: string
+          example: EdDSA
+        jws:
+          type: string
+          description: Placeholder — format TBD
+        signedBy:
+          type: string
+          description: DID URL of signing key
+
+    TrustEvidence:
+      type: object
+      properties:
+        type:
+          type: string
+        entryId:
+          type: string
+        registeredAt:
+          type: string
+          format: date-time
+
+    TrustLookupResult:
+      type: object
+      required: [issuerDid, recognition]
+      properties:
+        issuerDid:
+          type: string
+        recognition:
+          type: string
+          enum: [recognized, rejected]
+        reason:
+          type: string
+          nullable: true
+        scopes:
+          type: array
+          items:
+            type: string
+        vcTypes:
+          type: array
+          items:
+            type: string
+        validFrom:
+          type: string
+          format: date-time
+          nullable: true
+        validUntil:
+          type: string
+          format: date-time
+          nullable: true
+        accreditingBody:
+          type: object
+          nullable: true
+          properties:
+            id:
+              type: string
+            name:
+              type: string
+        evidence:
+          $ref: '#/components/schemas/TrustEvidence'
+        signature:
+          $ref: '#/components/schemas/TrustSignature'
+        chain:
+          $ref: '#/components/schemas/ChainSelfCheck'
+
+    CreateDidRequest:
+      type: object
+      required: [verificationMethods]
+      properties:
+        network:
+          type: string
+          enum: [local, testnet, mainnet]
+        verificationMethods:
+          type: array
+          items:
+            $ref: '#/components/schemas/AddVerificationMethodRequest'
+
+    AddVerificationMethodRequest:
+      type: object
+      required: [idFragment, type, publicKeyJwk]
+      properties:
+        idFragment:
+          type: string
+          example: key-1
+        type:
+          type: string
+          example: JsonWebKey2020
+        publicKeyJwk:
+          $ref: '#/components/schemas/PublicKeyJwk'
+        purposes:
+          type: array
+          items:
+            type: string
+            enum: [authentication, assertionMethod, capabilityInvocation, keyAgreement]
+
+    UpdateVerificationMethodRequest:
+      type: object
+      properties:
+        publicKeyJwk:
+          $ref: '#/components/schemas/PublicKeyJwk'
+        purposes:
+          type: array
+          items:
+            type: string
+
+    UpdateStatusEntryRequest:
+      type: object
+      required: [index, status]
+      properties:
+        index:
+          type: integer
+          minimum: 0
+        status:
+          type: string
+          enum: [valid, suspended, revoked]
+        reason:
+          type: string
+        effectiveAt:
+          type: string
+          format: date-time
+
+    AddTrustIssuerRequest:
+      type: object
+      required: [issuerDid]
+      properties:
+        issuerDid:
+          type: string
+        scopes:
+          type: array
+          items:
+            type: string
+        vcTypes:
+          type: array
+          items:
+            type: string
+        validFrom:
+          type: string
+          format: date-time
+          description: Accepted in API body; NOT written on-chain (MsgRegisterIssuer has no validity window yet)
+        validUntil:
+          type: string
+          format: date-time
+          description: Accepted in API body; NOT written on-chain (MsgRegisterIssuer has no validity window yet)
+        accreditingBodyId:
+          type: string
+        accreditingBodyName:
+          type: string
+          description: Forwarded to MsgRegisterIssuer.accrediting_body_name
+
+    PendingTrustRequest:
+      type: object
+      required: [id, issuerDid, status, stagingNote, onChain]
+      properties:
+        id:
+          type: string
+        issuerDid:
+          type: string
+        scopes:
+          type: array
+          items:
+            type: string
+        vcTypes:
+          type: array
+          items:
+            type: string
+        accreditingBodyId:
+          type: string
+        status:
+          type: string
+          enum: [pending, confirmed, rejected]
+        reason:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        stagingNote:
+          type: string
+          example: hàng đợi chờ công nhận (demo staging)
+        onChain:
+          type: boolean
+          description: true chỉ khi đã confirm thành công (có recognition on-chain)
+        txHash:
+          type: string
+        recognition:
+          type: string
+          nullable: true
+          enum: [recognized, rejected]
+        message:
+          type: string
+
+    PendingTrustListResult:
+      type: object
+      required: [stagingNote, items]
+      properties:
+        stagingNote:
+          type: string
+        storePath:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/PendingTrustRequest'
+
+    PendingTrustConfirmResult:
+      type: object
+      required: [id, issuerDid, recognition, onChain, requestStatus]
+      properties:
+        id:
+          type: string
+        requestStatus:
+          type: string
+          enum: [confirmed]
+        onChain:
+          type: boolean
+        stagingNote:
+          type: string
+        txHash:
+          type: string
+        issuerDid:
+          type: string
+        recognition:
+          type: string
+          enum: [recognized, rejected]
+        scopes:
+          type: array
+          items:
+            type: string
+        vcTypes:
+          type: array
+          items:
+            type: string
+        accreditingBody:
+          type: object
+          nullable: true
+        accreditingBodyId:
+          type: string
+        message:
+          type: string
+
+    UpdateTrustIssuerRequest:
+      type: object
+      properties:
+        scopes:
+          type: array
+          items:
+            type: string
+        vcTypes:
+          type: array
+          items:
+            type: string
+        validFrom:
+          type: string
+          format: date-time
+        validUntil:
+          type: string
+          format: date-time
+
+    TxAccepted:
+      type: object
+      required: [txHash, status]
+      properties:
+        txHash:
+          type: string
+        status:
+          type: string
+          enum: [pending]
+        message:
+          type: string
