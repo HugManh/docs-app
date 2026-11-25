@@ -1,0 +1,12 @@
+# Thư mục nào của vault được đưa lên web, và nằm ở đâu trên site.
+# Chỉ những thư mục liệt kê ở đây mới được public.
+# <thư-mục-trong-vault>   <đích-trong-content>
+get-started     get-started
+overview        overview
+governance      governance
+architecture    architecture
+specs           specs
+api             api
+developers      developers
+operations      operations
+Home.md         .
