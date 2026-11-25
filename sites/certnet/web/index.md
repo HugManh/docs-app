@@ -1,6 +1,6 @@
 ---
 title: Trang chủ
-description: Trang chủ tài liệu CertNet — Tổng quan, Quản trị, Kiến trúc, Đặc tả, Tích hợp, Vận hành
+description: Trang chủ tài liệu CertNet — Tổng quan, Quản trị, Kiến trúc, Đặc tả, Tích hợp, Vận hành, Phụ lục
 tags:
   - moc
   - certnet
@@ -8,7 +8,7 @@ tags:
 
 # CertNet Docs
 
-> **CertNet** là Layer-1 permissioned (PoA) mã nguồn mở — shared trust layer cho danh tính và chứng chỉ số (did:certnet, Credential Status, Trust Registry).  
+> **CertNet** là Layer-1 permissioned (PoA) mã nguồn mở — shared trust layer cho danh tính và chứng chỉ số (`did:certnet`, Credential Status, Trust Registry).  
 > Mega app là **client**. CertNet **không thuộc** mega app.
 
 ## Đọc nhanh
@@ -19,11 +19,11 @@ tags:
 | Quản trị & hai giai đoạn vận hành | [Quản trị](governance/) |
 | Stack Cosmos / modules / PII | [Kiến trúc](architecture/) |
 | Spec bắt buộc (roadmap 25/11) | [Đặc tả](specs/) |
-| **API Contract & OpenAPI (ghép)** | [API Contract](developers/API-Contract) · [openapi.yaml](developers/openapi.yaml) |
-| Gateway, phí & tự code | [Gateway](developers/Gateway) · [Tự implement](developers/Implement-API-Contract) |
+| **API Contract & OpenAPI (ghép)** | [API Contract](developers/api/API-Contract) · [openapi.yaml](developers/api/openapi.yaml) |
+| Gateway, phí & tự code | [Gateway](developers/api/Gateway) · [Tự implement](developers/guides/Implement-API-Contract) |
 | SDK, localnet, checklist bàn giao | [Tích hợp](developers/) |
 | Testnet / versioning / mainnet | [Vận hành](operations/) |
-| Thuật ngữ | [Thuật ngữ](get-started/Glossary) |
+| Tra cứu thuật ngữ, mã lỗi, FAQ | [Phụ lục](appendices/) |
 
 ## Câu chốt nội bộ
 
@@ -40,13 +40,17 @@ Nếu chỉ một app dùng và một bên kiểm soát hết → chain đắt v
 
 ## Bản đồ thư mục
 
-`	ext
+```text
 certnet-docs/
-├── get-started/          Bắt đầu & Thuật ngữ
+├── get-started/          Bắt đầu
 ├── overview/             Tổng quan
 ├── governance/           Quản trị
 ├── architecture/         Kiến trúc
 ├── specs/                Đặc tả
-├── developers/           Tích hợp (API, Gateway, SDK, Localnet)
-└── operations/           Vận hành
-`
+├── developers/           Tích hợp & Phát triển
+│   ├── api/              API & Cổng kết nối
+│   ├── guides/           Hướng dẫn triển khai
+│   └── testing/          Kiểm thử & Bàn giao
+├── operations/           Vận hành
+└── appendices/           Phụ lục (Glossary, Mã lỗi, FAQ)
+```
